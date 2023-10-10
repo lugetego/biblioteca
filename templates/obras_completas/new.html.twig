@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ObrasCompletas{% endblock %}
+
+{% block body %}
+    <h1>Create new ObrasCompletas</h1>
+
+    {{ include('obras_completas/_form.html.twig') }}
+
+    <a href="{{ path('app_obras_completas_index') }}">back to list</a>
+{% endblock %}

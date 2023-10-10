@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sitios index{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
+{% endblock %}
+
+
+{% block body %}
+    <h1>Sitios index</h1>
+
+    <table id="example" class="mt-5 table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Url</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sitio in sitios %}
+            <tr>
+                <td>{{ sitio.id }}</td>
+                <td>{{ sitio.nombre }}</td>
+                <td>{{ sitio.url }}</td>
+                <td>
+                    <a href="{{ path('app_sitios_show', {'id': sitio.id}) }}">show</a>
+                    <a href="{{ path('app_sitios_edit', {'id': sitio.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_sitios_new') }}">Create new</a>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+
+    <script type="application/javascript">
+        $(document).ready(function() {
+            $('#example').DataTable();
+        } );
+    </script>
+
+{% endblock %}

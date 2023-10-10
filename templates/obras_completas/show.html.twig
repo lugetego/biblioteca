@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ObrasCompletas{% endblock %}
+
+{% block body %}
+    <h1>ObrasCompletas</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ obras_completa.id }}</td>
+            </tr>
+            <tr>
+                <th>Autor</th>
+                <td>{{ obras_completa.autor }}</td>
+            </tr>
+            <tr>
+                <th>Titulo</th>
+                <td>{{ obras_completa.titulo }}</td>
+            </tr>
+            <tr>
+                <th>Url</th>
+                <td>{{ obras_completa.url }}</td>
+            </tr>
+            <tr>
+                <th>Vol</th>
+                <td>{{ obras_completa.vol }}</td>
+            </tr>
+            <tr>
+                <th>Clasificacion</th>
+                <td>{{ obras_completa.clasificacion }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_obras_completas_index') }}">back to list</a>
+
+    <a href="{{ path('app_obras_completas_edit', {'id': obras_completa.id}) }}">edit</a>
+
+    {{ include('obras_completas/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,36 @@
+{# templates/login/index.html.twig #}
+{% extends 'base.html.twig' %}
+{% block title %}Iniciar sesión{% endblock %}
+{% block lang %}{% endblock %}
+
+{% block body %}
+
+    <div class="form-signin container mt-5">
+
+        <h1 class="h3 mb-3 font-weight-normal text-center">Iniciar sesión</h1>
+
+        <form action="{{ path('login') }}" method="post">
+
+            <div class="form-floating mb-3">
+                <input type="text" value="{{ last_username }}" name="_username" id="username" class="form-control" autocomplete="username" required autofocus>
+                <label for="username">Username</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" name="_password" id="password" class="form-control" autocomplete="current-password" required>
+                <label for="password">Password</label>
+            </div>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+            {# If you want to control the URL the user is redirected to on success
+        <input type="hidden" name="_target_path" value="/account"/> #}
+            {% if error %}
+                <div class="m-2 text-danger text-center"><i class="fas fa-times"></i> {{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+            <button class="btn btn-primary form-signin" type="submit">
+                <i class="fas fa-sign-in-alt"></i> Iniciar sesión
+            </button>
+        </form>
+
+    </div>
+{% endblock %}

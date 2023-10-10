@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Revistas index{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
+{% endblock %}
+
+{% block body %}
+    <h1>Revistas index</h1>
+
+    <table id="example" class="mt-5 table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Slug</th>
+                <th>Nombre</th>
+                <th>Url</th>
+                <th>Editorial</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for revista in revistas %}
+            <tr>
+                <td>{{ revista.id }}</td>
+                <td>{{ revista.slug }}</td>
+                <td>{{ revista.nombre }}</td>
+                <td>{{ revista.url }}</td>
+                <td>{{ revista.editorial }}</td>
+                <td>
+                    <a href="{{ path('app_revistas_show', {'id': revista.id}) }}">show</a>
+                    <a href="{{ path('app_revistas_edit', {'id': revista.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_revistas_new') }}">Create new</a>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+
+    <script type="application/javascript">
+        $(document).ready(function() {
+            $('#example').DataTable();
+        } );
+    </script>
+
+{% endblock %}

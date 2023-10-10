@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Sitios{% endblock %}
+
+{% block body %}
+    <h1>Edit Sitios</h1>
+
+    {{ include('sitios/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_sitios_index') }}">back to list</a>
+
+    {{ include('sitios/_delete_form.html.twig') }}
+{% endblock %}
