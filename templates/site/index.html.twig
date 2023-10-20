@@ -1,0 +1,256 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+{% endblock %}
+
+{% block body %}
+    <div class="hero-image">
+        <div class="container">
+            <div class="hero-title">Biblioteca</div>
+            <div class="hero-subtitle">Dr. Humberto Cárdenas Trigos</div>
+            <div class="search-container d-flex justify-content-center">
+                <!--            https://www.youtube.com/watch?v=9hnJsNIBq1g-->
+                <form action="" class="search-bar" id="search-form">
+                    <input type="text" placeholder="Buscar en catálogos" name="s-catalogo" id="search-query">
+                    <button type="submit">
+                        <img src="{{ asset('build/images/search.png') }}" alt="search">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section id="alerta-bibliográfica">
+        <div class="container">
+            <h1>Alerta Bibliográfica</h1>
+            <div class="subtitle mb-5">Libros de reciente adquisición</div>
+
+            <div class="swiper bibSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="book-container">
+                            <img src="{{ asset('build/images/alerta-2023-1/numerical-methods.png')}}" class="img-responsive book-image" alt="book cover">
+                            <div class="book-title">
+                                Numerical methods for
+                                fractional differentiation
+                            </div>
+                            <div class="book-info">
+                                <div class="book-author">
+                                    Owolabi, Kolade M.
+                                </div>
+                                <div class="book-editorial">
+                                    Singapore : Springer, 2019
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-container">
+                            <img src="{{ asset('build/images/alerta-2023-1/advanced-numerical.png')}}"  class="img-responsive book-image" alt="book cover">
+                            <div class="book-title">
+                                Advanced numerical methods for differential equations : applications in science and engineering
+                            </div>
+                            <div class="book-info">
+                                <div class="book-author">
+                                    Singh, Harendra (Ed.)
+                                </div>
+                                <div class="book-editorial">
+                                    Boca Raton, FL : CRC Press, 2021.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-container">
+                            <img src="{{ asset('build/images/alerta-2023-1/introduction-stochastic-calc.png')}}" class="img-responsive book-image" alt="book cover">
+                            <div class="book-title">
+                                Introduction to stochastic calculus
+                            </div>
+                            <div class="book-info">
+                                <div class="book-author">
+                                    Karandikar, Rajeeva L.
+                                </div>
+                                <div class="book-editorial">
+                                    Singapore : Springer, 2018
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-container">
+                            <img src="{{ asset('build/images/alerta-2023-1/L2-approaches.png')}}" class="img-responsive book-image" alt="book cover">
+                            <div class="book-title">
+                                L² approaches in several complex variables : towards the Oka-Cartan theory with precise bounds. 2nd ed.
+                            </div>
+                            <div class="book-info">
+                                <div class="book-author">
+                                    Ōsawa, Takeo
+                                </div>
+                                <div class="book-editorial">
+                                    Tokyo : Springer, 2018.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-container">
+                            <img src="{{ asset('build/images/alerta-2023-1/linear-algebra-diff.png')}}" class="img-responsive book-image" alt="book cover">
+                            <div class="book-title">
+                                Linear algebra to differential equations
+                            </div>
+                            <div class="book-info">
+                                <div class="book-author">
+                                    Vasundhara Devi, J.
+                                </div>
+                                <div class="book-editorial">
+                                    Boca Raton, FL : CRC Press, 2022.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-container">
+                            <img src="{{ asset('build/images/alerta-2023-1/linear-model-theory.png')}}" class="img-responsive book-image" alt="book cover">
+                            <div class="book-title">
+                                Linear model theory : exercises and solutions
+                            </div>
+                            <div class="book-info">
+                                <div class="book-author">
+                                    Zimmerman, Dale L.
+                                </div>
+                                <div class="book-editorial">
+                                    Cham, Switzerland : Springer, 2020.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-container">
+                            <img src="{{ asset('build/images/alerta-2023-1/linear-transformation.png')}}" class="img-responsive book-image" alt="book cover">
+                            <div class="book-title">
+                                Linear transformation : examples and solutions
+                            </div>
+                            <div class="book-info">
+                                <div class="book-author">
+                                    Shah, Nita H.
+                                </div>
+                                <div class="book-editorial">
+                                    Boca Raton, FL : CRC Press, 2021.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-container">
+                            <img src="{{ asset('build/images/alerta-2023-1/math-puzzles.png')}}" class="img-responsive book-image" alt="book cover">
+                            <div class="book-title">
+                                Mathematical puzzles
+                            </div>
+                            <div class="book-info">
+                                <div class="book-author">
+                                    Winkler, Peter
+                                </div>
+                                <div class="book-editorial">
+                                    CRC Press, 2021.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-container">
+                            <img src="{{ asset('build/images/alerta-2023-1/numerical-methods.png')}}" class="img-responsive book-image" alt="book cover">
+                            <div class="book-title">
+                                Numerical methods for fractional differentiation
+                            </div>
+                            <div class="book-info">
+                                <div class="book-author">
+                                    Owolabi, Kolade M.
+                                </div>
+                                <div class="book-editorial">
+                                    Singapore : Springer, 2019
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources">
+        <div class="container">
+            <div class="d-flex flex-xs-column justify-content-center">
+                <div class="resources-item flex-column">
+                    <div class="resources-title">Acceso Remoto<br></div>
+                    <p>Si eres alumno vigente, profesor o académico en la UNAM, puedes aprovechar nuestros recursos electrónicos desde cualquier equipo con conexión a internet.</p>
+                    <div class="d-flex justify-content-end">
+                        <a href="https://bidi.unam.mx/index.php/ayuda/servicio-de-acceso-remoto" class="link-warning">Ver más</a>
+                    </div>
+                </div>
+                <div class="resources-item flex-column lateral-borders">
+                    <div class="resources-title">Dirección general de bibliotecas UNAM</div>
+                    <p>Coordina el Sistema Bibliotecario y de Información de la Universidad Nacional Autónoma de México (SIBIUNAM).</p>
+                    <div class="d-flex justify-content-end">
+                        <a href="https://www.dgb.unam.mx/" class="link-warning">Ver más</a>
+                    </div>
+                </div>
+                <div class="resources-item flex-column">
+                    <div class="resources-title">Sistema de referencias bibliográficas</div>
+                    <p>Repositorio que concentra, preserva y resgurada la producción científica de cada uno de los académicos del CCM.</p>
+                    <div class="d-flex justify-content-end">
+                        <a href="https://gaspacho.matmor.unam.mx/SRB/" class="link-warning">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="articles">
+        <div class="container">
+            <h1>Artículos publicados</h1>
+            <div class="subtitle mb-5">Últimos artículos publicados</div>
+            <div class="articles-container">
+                <div class="articles-item">
+                    <div class="article-title">Dissecting the square into seven or nine congruent parts</div>
+                    <div class="article-info">Discrete Mathematics, Vol. 345, Issue 5, 2022, p. 112800</div>
+                    <div class="article-authors">Maldonado, Gerardo L.; Roldán-Pensado, Edgardo</div>
+                </div>
+                <div class="articles-item">
+                    <div class="article-title">On the algebraic K-theory of orientable 3-manifold groups</div>
+                    <div class="article-info">Journal of Pure and Applied Algebra, Vol. 226, Issue 7, 2022, p. 106981</div>
+                    <div class="article-authors">Juan-Pineda, Daniel; Sánchez Saldaña, Luis Jorge</div>
+                </div>
+                <div class="articles-item">
+                    <div class="article-title">Modified scattering for the nonlinear nonlocal Schrödinger equation in one-dimensional case</div>
+                    <div class="article-info">Zeitschrift für Angewandte Mathematik und Physik, Vol. 73, Issue 1, 2022, p.2</div>
+                    <div class="article-authors">Hayashi, Nakao; Naumkin, Pavel I.</div>
+                </div>
+                <div class="articles-item">
+                    <div class="article-title">Maximal almost disjoint families and pseudocompactness of hyperspaces</div>
+                    <div class="article-info">Topology and its Applications, Vol. 305, 2022, p. 107872</div>
+                    <div class="article-authors">Guzmán, O.; Hrusak, M.; Rodrigues, V. O.; Todorcevic, S.; Tomita, A. H.</div>
+                </div>
+                <div class="articles-item">
+                    <div class="article-title">A preprojective Auslander-Reiten component for the socle projective modules of some right-peak algebras</div>
+                    <div class="article-info">Boletín de la Sociedad Matemática Mexicana, Vol. 28, Issue 1, 2022, p. 15</div>
+                    <div class="article-authors">Bautista, R., Dorado, I.;</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
+
+
+{% block javascripts %}
+
+    {{ parent() }}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    {{ encore_entry_script_tags('search') }}
+    {{ encore_entry_script_tags('swiper') }}
+{% endblock %}
+

@@ -1,10 +1,12 @@
 @import '~bootstrap';
 @import '~@fortawesome/fontawesome-free/css/all.css';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 
 
 body {
-    background-color: #f5f5f5;
-    padding-top: 70px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
 }
 
 textarea{
@@ -67,3 +69,523 @@ textarea{
     color: #dc3545;
 }
 
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 2.6rem;
+    color: #878787;
+}
+
+.nav-link {
+    display: block;
+    font-size: 18px;
+    padding: 0.5rem 1rem;
+    color: #878787;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: #BB8800;
+    border-bottom: 4px solid;
+}
+
+.h1, h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 41px;
+    color: #282828;
+    text-align: center;
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #878787;
+    text-align: center;
+}
+
+.hero-image {
+    background-image: url(../images/hero-bib.png);
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 200px;
+}
+
+.hero-title {
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 152px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.hero-subtitle {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 64px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #BB8800;
+}
+
+.search-container {
+    margin: 80px 0;
+}
+
+.search-bar {
+    width: 50%;
+    max-width: 600px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 60px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(4px) saturate(120%);
+}
+
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 12px 12px;
+    font-size: 1.5rem;
+    color: #BB8800;
+
+}
+
+.search-bar button img {
+    width: 1.2rem;
+}
+
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: rgba(255,255,255,0.2);
+    cursor: pointer;
+}
+
+#alerta-bibliográfica {
+    margin: 40px 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin: 20px 0;
+}
+
+.swiper-slide {
+    /*text-align: center;*/
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid #DCDCDC;*/
+    /*border-radius: 15px;*/
+    padding: 12px;
+}
+
+/*.swiper-slide images {*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*}*/
+
+.book-container {
+    max-width: 180px;
+}
+
+.book-image {
+    width: 100%;
+}
+
+.book-info {
+    justify-content: flex-start;
+}
+
+.book-title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #636363;
+    margin-top: 12px;
+}
+
+.book-author {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #636363;
+    justify-content: flex-start;
+}
+
+.book-editorial {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #8d8d8d;
+    text-align: left;
+}
+
+#resources {
+    background-color: #002550;
+    padding: 60px 0;
+}
+
+.resources-item {
+    padding: 0 30px;
+    max-width: 380px;
+}
+
+.resources-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    min-height: 52px;
+}
+
+#resources p {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #C0F0FF;
+}
+
+#resources a {
+    text-decoration: none;
+}
+
+#resources a:hover {
+    text-decoration: underline;
+}
+
+.lateral-borders {
+    border-left: 4px solid #BB8800;
+    border-right: 4px solid #BB8800;
+}
+
+#articles {
+    margin: 80px 0;
+}
+
+.articles-item {
+    padding: 28px 12px;
+    border-bottom: 1px solid #8d8d8d;
+    max-width: 75%;
+}
+
+.articles-item:hover {
+    background-color: #e1e1e1;
+}
+
+.article-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 22px;
+    color: #002B7A;
+    margin-bottom: 8px;;
+}
+
+.article-info {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #878787;
+    margin-bottom: 6px;
+}
+
+.article-authors {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: #BB8800;
+
+}
+
+.banner-nosotros {
+    background-image: url(../images/banner-nosotros.png);
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 100px;
+}
+
+.banner-recursos {
+    background-image: url(../images/banner-recursos.png);
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 100px;
+}
+
+.banner-title {
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 152px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#section-nosotros {
+    margin: 40px 40px;
+}
+
+.content-title {
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+.content {
+    color: #282828;
+    text-align: justify;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 150% */
+}
+
+.statement {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.mision-vision-title {
+    color: #B80;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 52px;
+}
+
+#gallery {
+    padding: 60px 0;
+}
+.bg-biomate {
+    background-image: url('../images/BIOLOGIA-MATEMATICA 1.png');
+}
+
+.bg-geo-discreta {
+    background-image: url('../images/GEOMETRIA-DISCRETA 1.png');
+}
+
+.bg-teoria-grupos {
+    background-image: url('../images/TEORIA-DE-GRUPOS 1.png');
+}
+
+.bg-diferenciales {
+    background-image: url('../images/ECUACIONES-DIFERENCIALES 1.png');
+}
+
+.bg-fisica {
+    background-image: url('../images/FISICA-MATEMATICA.png');
+}
+
+.bg-cuantica {
+    background-image: url('../images/TEORIA-CUANTICA-DE-CAMPOS.png');
+}
+
+.bg-ge-algebraica {
+    background-image: url('../images/GEOMETRIA-ALGEBRAICA 1.png');
+}
+
+.bg-geo-discreta2 {
+    background-image: url('../images/GEOMETRIA-DISCRETA 2.png');
+}
+
+.bg-gravedad-quantica {
+    background-image: url('../images/GRAVEDAD-CUANTICQA 1.png');
+}
+
+.bg-sistemas-dinamicos {
+    background-image: url('../images/SISTEMAS-DINAMICOS 1.png');
+}
+
+.bg-teoria-numeros {
+    background-image: url('../images/TEORIA-DE-NUMEROS 1.png');
+}
+
+
+.bg-area {
+    height: 200px;
+    width: 325px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 0.5rem!important;
+    margin-left: 0.5rem!important;
+
+    margin-bottom: 0.5rem!important;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center!important;
+    justify-content: center!important;
+}
+
+.bd-container {
+    margin: 24px 0;
+    padding: 32px;
+    border-radius: 12px;
+    background: #FAFAFA;
+}
+
+.bd-container:hover {
+    border: #dee2e6 1px solid;
+    background-color: #f8f9fa;
+}
+
+.bd-image {
+    margin-right: 24px;
+    min-width: 200px;
+}
+
+.bd-title {
+    color: #B80;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.bd-container {
+    color: #282828;
+    font-weight: 400;
+}
+
+#editoriales {
+    padding: 60px 60px;
+    background: #02294C;
+}
+
+.white {
+    color: #FFFFFF!important;
+}
+
+.editorial {
+    padding: 24px;
+    margin-right: 28px;
+    margin-left: 28px;
+}
+
+.editorial:hover {
+    border-bottom: #FFFFFF solid 3px;
+}
+
+.editorial-logo {
+    margin-right: 28px;
+    min-width: 80px;
+}
+
+.editorial-logo-l {
+    margin-left: 28px;
+    min-width: 80px;
+}
+
+.editorial-name {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#sitios-interes {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.sitio-card {
+    min-width: 400px;
+    padding: 24px;
+}
+
+.sitio-card:hover {
+    border-radius: 12px;
+    border: #dee2e6 1px solid;
+    background-color: #f8f9fa;
+}
+
+.sitio-card-2 {
+    min-width: 400px;
+    padding: 12px 0px 8px 8px;
+    border-bottom: solid 1px #D9D9D9;
+    margin: 0 25px 16px 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.sitio-card-2:hover {
+    border-radius: 8px;
+    border: #dee2e6 1px solid;
+    background-color: #f8f9fa;
+}
+
+.bi {
+    font-size: 18px;
+}
+
+.sitio-title {
+    color: #B80;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+.sitio-link-container {
+    min-width: 40%;
+    padding: 12px;
+}
+
+.sitio-link {
+    color: #282828;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#footer {
+    background-color: #002550;
+    padding-top: 68px;
+    padding-bottom: 48px;
+}
+
+.footer-nav {
+    margin-top: 3rem;
+    padding: 20px 0;
+    border-bottom: 1px solid #eeeeee;
+    /*border: 1px solid #DCDCDC;*/
+    color: white;
+}
+
+.footer-nav-item {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-nav-item:hover {
+    color: #BB8800;
+    text-decoration: #AAAAAA;
+}
+
+.copy-right {
+    font-size: 12px;
+}
+
+.dropdown-menu {
+    --bs-dropdown-link-active-bg: #bb8800;
+}

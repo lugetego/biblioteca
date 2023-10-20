@@ -6,7 +6,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 use App\Repository\RevistasRepository;
 
 /**
- * @ORM\Entity(repositoryClass=RevistasRepository::class)
+ * @ORM\Entity(repositoryClass="App\Repository\RevistasRepository", repositoryClass=RevistasRepository::class)
  * @ORM\HasLifecycleCallbacks
  */
 class Revistas

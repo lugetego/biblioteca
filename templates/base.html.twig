@@ -1,19 +1,89 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Biblioteca Humberto Cárdenas Trigos{% endblock %}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+    {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    {% endblock %}
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+        <a class="navbar-brand" href="http://www.unam.mx">
+            <img src="{{ asset('build/images/nav-unam.png') }}" alt="UNAM" height="60">
+        </a>
+        <a class="navbar-brand" href="http://www.matmor.unam.mx.mx">
+            <img src="{{ asset('build/images/nav-ccm.png') }}" alt="CCM" height="60">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                {% block nav %}
+                    <li class="nav-item">
+                        <a class="nav-link active d-flex align-content-center" aria-current="page" href="{{ path('app_site_index') }}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_site_nosotros') }}">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_site_recursos') }}">Recursos</a>
+                    </li>
+                    <div class="dropdown">
+                        <button class="nav-link  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Catálogos
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://ccm.bibliotecas.unam.mx:82/" target="_blank">Catálogos electrónicos</a></li>
+                            <li><a class="dropdown-item" href="{{ path('app_obras_completas_index') }}">Obras completas</a></li>
+                            <li><a class="dropdown-item" href="{{ path('app_revistas_index') }}">Revistas electrónicas</a></li>
+                        </ul>
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                {% endblock %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{% block body %}{% endblock %}
+
+{% block footer %}
+    <footer id="footer">
+        <div class="container">
+            <div class="d-flex flex-xs-column justify-content-center align-content-center">
+                <div class="align-self-center me-4"><img src="{{ asset('build/images/footer-unam.png')}}" alt="Logo Posgrado UNAM"></div>
+                <div class="align-self-center ms-4"><img src="{{ asset('build/images/footer-ccm.png')}}" alt="Logo Conacyt"></div>
+            </div>
+
+            <div class="footer-nav d-flex justify-content-evenly">
+                <div><a class="footer-nav-item" href="{{ path('app_site_index') }}">Inicio</a></div>
+                <div><a class="footer-nav-item" href="{{ path('app_site_nosotros') }}">Nosotros</a></div>
+                <div><a class="footer-nav-item" href="{{ path('app_site_recursos') }}">Recursos</a></div>
+                <div><a class="footer-nav-item" href="https://ccm.bibliotecas.unam.mx:82/">Catálogos electrónicos</a></div>
+
+                <div class="footer-nav-item">Contacto</div>
+            </div>
+
+            <p class="copy-right text-center text-light mt-5">© 2023 Centro de Ciencias Matemáticas<br>
+                Universidad Nacional Autónoma de México, Campus Morelia<br>
+                <span class="fw-light">todos los derechos reservados.</span></p>
+        </div>
+    </footer>
+{% endblock %}
+</body>
 </html>

@@ -1,0 +1,184 @@
+{% extends 'base.html.twig' %}
+{% block title %}Biblioteca Humberto Cárdenas - Nosotros{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-thumbnail.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-zoom.min.css" />
+{% endblock %}
+
+{% block nav %}
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="{{ path('app_site_index') }}">Inicio</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active d-flex align-content-center" href="{{ path('app_site_nosotros') }}">Nosotros</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ path('app_site_recursos') }}">Recursos</a>
+    </li>
+    <div class="dropdown">
+        <button class="nav-link  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Catálogos
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://ccm.bibliotecas.unam.mx:82/" target="_blank">Catálogos electrónicos</a></li>
+            <li><a class="dropdown-item" href="{{ path('app_obras_completas_index') }}">Obras completas</a></li>
+            <li><a class="dropdown-item" href="{{ path('app_revistas_index') }}">Revistas electrónicas</a></li>
+        </ul>
+    </div>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Contacto</a>
+    </li>
+{% endblock %}
+{% block body %}
+    <div class="banner-nosotros">
+        <div class="container">
+            <div class="banner-title">Nosotros</div>
+        </div>
+    </div>
+
+    <section class="section-nosotros">
+
+        <div class="content-title">
+            <h1 class="mt-5">Biblioteca Humberto Cárdenas Trigos</h1>
+            <div class="subtitle mb-5">Centro de Ciencias Matemáticas</div>
+        </div>
+
+        <div class="container text-center">
+            <div class="row justify-content-md-center mt-5">
+                <div class="col-12 col-sm-5">
+                    <p class="content me-3">
+                        La Biblioteca del Centro de Ciencias Matemáticas inicia el desarrollo de su acervo bibliográfico y hemerográfico
+                        a partir de diciembre de 1990, cuando aún formaba parte del Instituto de Matemáticas de la UNAM, con 31 años de
+                        creación y 25 años de servicio, es una de las bibliotecas más importantes y representativas en el área de las
+                        matemáticas puras, ubicada en el Campus UNAM de la Ciudad de Morelia. Dispone de una colección bibliográfica de
+                        13,305 volúmenes de libros, 13.750 volúmenes de revistas, recibe en suscripción 106 títulos de revistas
+                        especializadas en matemáticas. Es importante mencionar que la biblioteca ha ido a la vanguardia en el desarrollo
+                        de sus servicios bibliotecarios y de información, cuenta con una colección de más de 17.000 libros electrónicos
+                        en matemáticas, estadística, física y probabilidad, entre otros. Tiene acceso a 1,570 revistas electrónicas en
+                        texto completo en las áreas que se cultivan en el Centro de Ciencias Matemáticas, así como, obras completas,
+                        enciclopedias, diccionarios, catálogos globales en línea de libros, revistas y tesis, cuenta con el acceso
+                        electrónico a dos bases de datos especializadas en matemáticas como son el MathSciNet y Zentralblatt, además
+                        dispone del acceso a la biblioteca digital de la UNAM.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-5">
+                    <img src="{{asset('/build/images/bib-foto1.png')}}" alt="Foto biblioteca">
+                </div>
+            </div>
+
+            <div class="statement d-flex justify-content-sm-center">
+                <div class="mision-vision-title w-25">Misión</div>
+                <div class="content w-50">
+                    En la Unidad de Documentación estamos comprometidos con nuestros usuarios para brindarles servicios de información
+                    actuales, eficientes y oportunos. Buscamos ser el apoyo bibliográfico y documental de las necesidades académicas
+                    de cada uno de los investigadores, estudiantes, profesores y público en general interesado en el estudio de las matemáticas.
+                </div>
+            </div>
+
+            <div class="statement d-flex justify-content-sm-center">
+                <div class="mision-vision-title w-25">Visión</div>
+                <div class="content w-50">
+                    Mantener a la vanguardia a la Unidad de Documentación en lo referente al uso y manejo de las tecnologías de
+                    información, desarrollar acervos impresos y digitales con literatura actualizada en el campo de las matemáticas
+                    y áreas de investigación que se cultivan en el Centro de Ciencias Matemáticas, conservar y preservar el acervo
+                    bibliográfico y hemerográfico, difundir y promover los recursos y servicios de información con el propósito de
+                    apoyar las actividades sustantivas de la Universidad como son; investigación, docencia, y difusión de la cultura, etc.
+                </div>
+            </div>
+
+            <div class="statement d-flex justify-content-sm-center">
+                <div class="mision-vision-title w-25">Colecciones</div>
+                <div class="content w-50">
+                    La Unidad de Documentación se ha consolidado a nivel regional como el acervo más importante en el área de las
+                    matemáticas, posee una colección bibliográfica de más de 12000 volúmenes de libros y 9428 volúmenes de revistas,
+                    recibe en suscripción 105 títulos de revistas, a través de su página web se pueden consultar más de 1400 revistas
+                    electrónicas en texto completo, y más de 9000 libros electrónicos especializados en matemáticas de las principales
+                    editoriales a nivel mundial, da acceso a las dos bases de datos más importantes en esta área como son el MathSciNet y el Zentralblatt.
+                </div>
+            </div>
+
+            <div class="content-title">
+                <h1 class="mt-5">Conoce Nuestra Biblioteca</h1>
+                <div class="subtitle mb-5">Centro de Ciencias Matemáticas, Morelia, Michoacán</div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <img class="w-50" src="{{ asset('/build/images/gallery/DSC_0011-full.jpg') }}" alt="gallery 1">
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <div id="lightgallery" class="w-75 mt-2">
+                    <a href="{{ asset('/build/images/gallery/DSC_0011-full.jpg') }}">
+                        <img src="{{ asset('/build/images/gallery/DSC_0011.jpg') }}" />
+                    </a>
+                    <a href="{{ asset('/build/images/gallery/DSC_0022-full.jpg') }}">
+                        <img src="{{ asset('/build/images/gallery/DSC_0022.jpg') }}" />
+                    </a>
+                    <a href="{{ asset('/build/images/gallery/DSC_0078-full.jpg') }}">
+                        <img src="{{ asset('/build/images/gallery/DSC_0078.jpg') }}" />
+                    </a>
+                    <a href="{{ asset('build/images/gallery/DSC_0127-full.jpg') }}">
+                        <img src="{{ asset('/build/images/gallery/DSC_0127.jpg') }}" />
+                    </a>
+                    <a href="{{ asset('build/images/gallery/DSC_0356-full.jpg') }}">
+                        <img src="{{ asset('/build/images/gallery/DSC_0356.jpg') }}" />
+                    </a>
+                    <a href="{{ asset('/build/images/gallery/DSC_0359-full.jpg') }}">
+                        <img src="{{ asset('/build/images/gallery/DSC_0359.jpg') }}" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="content-title">
+                <h1 class="mt-5">Áreas de Especialización</h1>
+            </div>
+
+            <div>
+                <div class="d-flex justify-content-center my-3">
+                    <div class="bg-biomate bg-area"><div class="fw-bold">BIOLOGÍA</div><div>MATEMÁTICA</div></div>
+                    <div class="bg-geo-discreta bg-area"><div class="fw-bold">GEOMETRÍA</div><div>DISCRETA</div></div>
+                    <div class="bg-teoria-grupos bg-area"><div class="fw-bold">COMBINATORIA</div><div>ALGEBRAICA Y TEORÍA</div><div>DE GRUPOS</div></div>
+                </div>
+
+                <div class="d-flex justify-content-center my-3">
+                    <div class="bg-diferenciales bg-area"><div class="fw-bold">ECUACIONES</div><div>DIFERENCIALES</div></div>
+                    <div class="bg-fisica bg-area"><div class="fw-bold">FÍSICA</div><div>MATEMÁTICA</div></div>
+                    <div class="bg-cuantica bg-area"><div class="fw-bold">FUNDAMENTOS DE LA</div><div>TEORÍA CUÁNTICA</div><div>DE CAMPOS</div></div>
+                </div>
+
+                <div class="d-flex justify-content-center my-3">
+                    <div class="bg-ge-algebraica bg-area"><div class="fw-bold">GEOMETRÍA</div><div>ALGEBRAICA</div></div>
+                    <div class="bg-geo-discreta2 bg-area"><div class="fw-bold">GEOMETRÍA</div><div>DISCRETA</div></div>
+                    <div class="bg-gravedad-quantica bg-area"><div class="fw-bold">GRAVEDAD</div><div>CUÁNTICA</div></div>
+                </div>
+
+                <div class="d-flex justify-content-center my-3">
+                    <div class="bg-sistemas-dinamicos bg-area"><div class="fw-bold">SISTEMAS</div><div>DINAMIC0S</div></div>
+                    <div class="bg-teoria-numeros bg-area"><div class="fw-bold">TEORÍA</div><div>DE NÚMEROS</div></div>
+                </div>
+            </div>
+
+            <div class="content-title">
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block javascripts %}
+
+    {{ parent() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+    <script type="text/javascript">
+        lightGallery(document.getElementById('lightgallery'), {
+            plugins: [lgZoom, lgThumbnail],
+            speed: 500,
+            thumbnail: true,
+        });
+    </script>
+{% endblock %}

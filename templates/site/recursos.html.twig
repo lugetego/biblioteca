@@ -1,0 +1,323 @@
+{% extends 'base.html.twig' %}
+{% block title %}Biblioteca Humberto Cárdenas - Nosotros{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+{% endblock %}
+{% block nav %}
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="{{ path('app_site_index') }}">Inicio</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ path('app_site_nosotros') }}">Nosotros</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active d-flex align-content-center" href="{{ path('app_site_recursos') }}">Recursos</a>
+    </li>
+    <div class="dropdown">
+        <button class="nav-link  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Catálogos
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://ccm.bibliotecas.unam.mx:82/" target="_blank">Catálogos electrónicos</a></li>
+            <li><a class="dropdown-item" href="{{ path('app_obras_completas_index') }}">Obras completas</a></li>
+            <li><a class="dropdown-item" href="{{ path('app_revistas_index') }}">Revistas electrónicas</a></li>
+        </ul>
+    </div>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Contacto</a>
+    </li>
+{% endblock %}
+
+{% block body %}
+<div class="banner-recursos">
+    <div class="container">
+        <div class="banner-title">Recursos</div>
+    </div>
+</div>
+
+    <section id="recursos">
+        <div class="content-title">
+            <h1 class="mt-5">Bases de Datos</h1>
+        </div>
+
+        <div class="container">
+            <div class="bd-container">
+                <div class="d-flex js-link" data-url="https://zbmath.org/">
+                    <div class="bd-image d-flex align-items-center"><img src="{{ asset('/build/images/zbmath.png')}}" alt="Zentralblatt image"></div>
+                    <div class="d-flex flex-column">
+                        <div class="bd-title">Zentralblatt</div>
+                        <div class="bd-content">Base de datos referencial  y bibliográfica especializada en matemáticas. Contiene 3,000,000 registros.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bd-container">
+                <div class="d-flex js-link" data-url="https://www.scimagojr.com/">
+                    <div class="bd-image d-flex align-items-center"><img src="{{ asset('/build/images/srj.png')}}" alt="Scimago image"></div>
+                    <div class="d-flex flex-column">
+                        <div class="bd-title">Scimago</div>
+                        <div class="bd-content">Analiza la calidad y el impacto de las revistas a partir de los resultados de la base de datos  Scopus.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bd-container">
+                <div class="d-flex js-link" data-url="http://webofscience.com/">
+                    <div class="bd-image d-flex align-items-center"><img src="{{ asset('/build/images/clarivate.png')}}" alt="Web of Science image"></div>
+                    <div class="d-flex flex-column">
+                        <div class="bd-title">Web of Science</div>
+                        <div class="bd-content">WoS provee el acceso a un conjunto de base de datos de citas de artículos de revistas científicas.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bd-container">
+                <div class="d-flex js-link" data-url="https://gaspacho.matmor.unam.mx/SRB/">
+                    <div class="bd-image d-flex align-items-center"> <img src="{{ asset('/build/images/SRB.png')}}" alt="SRB image"></div>
+                    <div class="d-flex flex-column">
+                        <div class="bd-title">Sistema de Referencias Bibliográficos</div>
+                        <div class="bd-content">Repositorio  que concentra, preserva y resguarda la producción científica de los académicos en el CCM.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bd-container">
+                <div class="d-flex js-link" data-url="">
+                    <div class="bd-image d-flex align-items-center"><img src="{{ asset('/build/images/ads.png')}}" alt="ADS image"></div>
+                    <div class="d-flex flex-column">
+                        <div class="bd-title">ADS/Nasa</div>
+                        <div class="bd-content">Analiza la calidad y el impacto de las revistas a partir de los resultados de la base de datos Scopus.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bd-container">
+                <div class="d-flex js-link" data-url="https://www.scopus.com/">
+                    <div class="bd-image d-flex align-items-center"><img src="{{ asset('/build/images/scopus.png')}}" alt="scopus image"></div>
+                    <div class="d-flex flex-column">
+                        <div class="bd-title">Scopus</div>
+                        <div class="bd-content">Base de datos referencial editada por Elsevier contiene 39 millones de resúmenes y  citas de artículos de revistas académicas. </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-title">
+                <h1 class="mt-5">Bases de Datos</h1>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <div class="content w-75 mb-5">
+                    Libros electrónicos en texto completo de las editoriales más prestigiadas a nivel mundial,  se pueden consultar
+                    en cualquier computadora conectada a la red UNAM, sí está fuera del Campus Universitario lo puede hacer a través
+                    del Servicio de Acceso Remoto que provee la Dirección General de Bibliotecas. Los recursos a los que tenemos
+                    disponibilidad de acceso están marcados en verde o tienen un candado abierto, sí necesita consultar todos los
+                    libros electrónicos que ha comprado la UNAM en todas las áreas del conocimiento puede consultar la base de datos Librunam.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="editoriales">
+
+        <h1 class="content-title white">Editoriales</h1>
+
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <div class="d-flex flex-column justify-content-end">
+                    <div class="editorial d-flex align-items-center justify-content-end js-link" data-url="https://www.ams.org/home/page">
+                        <div class="editorial-name">American Mathematical Society</div>
+                        <div class="editorial-logo-l d-flex justify-content-center"><img src="{{ asset('/build/images/editoriales/AMS.png')}}" alt="AMS logo"></div>
+                    </div>
+                    <div class="editorial d-flex align-items-center justify-content-end js-link" data-url="https://www.cambridge.org/universitypress">
+                        <div class="editorial-name">Cambridge University Press</div>
+                        <div class="editorial-logo-l d-flex justify-content-center"><img src="{{ asset('/build/images/editoriales/CAMBRIDGE.png')}}" alt="Cambridge logo"></div>
+                    </div>
+                    <div class="editorial d-flex align-items-center justify-content-end js-link" data-url="https://euromathsoc.org/">
+                        <div class="editorial-name">European Mathematical Society</div>
+                        <div class="editorial-logo-l d-flex justify-content-center"><img src="{{ asset('/build/images/editoriales/EUROPEAN.png')}}" alt="European Math Society logo"></div>
+                    </div>
+                    <div class="editorial d-flex align-items-center justify-content-end js-link" data-url="https://global.oup.com/">
+                        <div class="editorial-name">Oxford University Press</div>
+                        <div class="editorial-logo-l d-flex justify-content-center"><img src="{{ asset('/build/images/editoriales/Oxford.png')}}" alt="Oxford logo"></div>
+                    </div>
+                    <div class="editorial d-flex align-items-center justify-content-end js-link" data-url="https://www.siam.org/">
+                        <div class="editorial-name">Society for Industrial and <br>Applied Mathematics</div>
+                        <div class="editorial-logo-l d-flex justify-content-center"><img src="{{ asset('/build/images/editoriales/SIAM.png')}}" alt="SIAM logo"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="d-flex flex-column justify-content-begin" data-url="https://www.springer.com/de">
+                    <div class="editorial d-flex align-items-center js-link">
+                        <div class="editorial-logo d-flex justify-content-center"><img src="{{ asset('/build/images/editoriales/Springer.png')}}" alt="Springer logo"></div>
+                        <div class="editorial-name">Springer Verlang</div>
+                    </div>
+                    <div class="editorial d-flex align-items-center js-link" data-url="https://www.tandfonline.com/">
+                        <div class="editorial-logo d-flex justify-content-center"><img src="{{ asset('/build/images/editoriales/TYF.png')}}" alt="Taylor and Francis logo"></div>
+                        <div class="editorial-name">Taylor & Francis Group</div>
+                    </div>
+                    <div class="editorial d-flex align-items-center js-link" data-url="https://www.degruyter.com/">
+                        <div class="editorial-logo d-flex justify-content-center"><img src="{{ asset('/build/images/editoriales/Gutyer.png')}}" alt="Gutyer logo"></div>
+                        <div class="editorial-name">De Gruyter</div>
+                    </div>
+                    <div class="editorial d-flex align-items-center js-link" data-url="https://mitpress.mit.edu/">
+                        <div class="editorial-logo d-flex justify-content-center"><img src="{{ asset('/build/images/editoriales/mitpress.png')}}" alt="MIT Press logo"></div>
+                        <div class="editorial-name">The MIT Press</div>
+                    </div>
+                    <div class="editorial d-flex align-items-center js-link" data-url="https://onlinelibrary.wiley.com/">
+                        <div class="editorial-logo d-flex justify-content-center"><img src="{{ asset('/build/images/editoriales/WILEY.png')}}" alt="Wiley logo"></div>
+                        <div class="editorial-name">Wiley Online Library</div>
+                    </div>
+                    <div class="editorial d-flex align-items-center js-link" data-url="https://www.worldscientific.com/">
+                        <div class="editorial-logo d-flex justify-content-center"><img src="{{ asset('/build/images/editoriales/Word-Scientific.png')}}" alt="World Scientific logo"></div>
+                        <div class="editorial-name">World Scientific</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="sitios-interes">
+        <div class="container">
+            <div class="content-title">
+                <h1 class="mt-5">Sitios de Interés</h1>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <div class="content w-75 mb-5">
+                    Vínculos de diversas instituciones relacionadas con información digitalizada en matemáticas, física, estadística,
+                    biología y probabilidad, a través de estos enlaces usted podrá consultar, memorias a congresos, obras completas,
+                    revistas y libros en texto completo. Algunos con acceso limitado y otros con libre acceso a todos sus contenidos.
+                </div>
+            </div>
+
+            <div>
+                <div class="d-flex justify-content-center">
+                    <div class="sitio-card js-link" data-url="https://www.smm.org.mx/">
+                        <div class="d-flex flex-column">
+                            <div><img src="{{ asset('/build/images/SMM.png')}}" alt="SMM"></div>
+                            <div class="sitio-title">Sociedad Matemática Mexicana</div>
+                            <div>Estimular y mantener el interés por la investigación</div>
+                            <div>matemática en México</div>
+                        </div>
+                    </div>
+                    <div class="sitio-card js-link" data-url="https://www.ams.org/">
+                        <div class="d-flex flex-column">
+                            <div><img src="{{ asset('/build/images/AMS.png')}}" alt="SMM"></div>
+                            <div class="sitio-title">American Mathematical Society</div>
+                            <div>Association of professional mathematicians </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center my-5">
+                    <div class="sitio-card js-link" data-url="https://www.aip.org/">
+                        <div class="d-flex flex-column">
+                            <div><img src="{{ asset('/build/images/AIP.png')}}" alt="SMM"></div>
+                            <div class="sitio-title">American Institute of Physics</div>
+                            <div>Advances, promotes and serves the physical</div>
+                            <div>sciences for the benefit of humanity.</div>
+                        </div>
+                    </div>
+                    <div class="sitio-card">
+                        <div class="d-flex flex-column js-link" data-url="https://www.jstor.org/">
+                            <div><img src="{{ asset('/build/images/JSTOR.png')}}" alt="SMM"></div>
+                            <div class="sitio-title">JSTOR digital library</div>
+                            <div>provides full-text searches of almost 2,000 journals</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <div class="sitio-card-2 js-link" data-url="https://services.acm.org/">
+                        <i class="bi bi-link-45deg"></i>
+                        <div class="sitio-link">Machinery (ACM)</div>
+                    </div>
+                    <div class="sitio-card-2 js-link" data-url="https://www.iop.org/">
+                        <i class="bi bi-link-45deg"></i>
+                        <div class="sitio-link">Institute of Physics (IOP)</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="sitio-card-2 js-link" data-url="https://www.aps.org/">
+                        <i class="bi bi-link-45deg"></i>
+                        <div class="sitio-link">American Physical Society (APS)</div>
+                    </div>
+                    <div class="sitio-card-2 js-link" data-url="https://www.jstage.jst.go.jp/">
+                        <i class="bi bi-link-45deg"></i>
+                        <div class="sitio-link">J-Stage</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="sitio-card-2 js-link" data-url="https://bioone.org/">
+                        <i class="bi bi-link-45deg"></i>
+                        <div class="sitio-link">BioOne</div>
+                    </div>
+                    <div class="sitio-card-2 js-link" data-url="https://koreascience.kr/">
+                        <i class="bi bi-link-45deg"></i>
+                        <div class="sitio-link">Korea Science</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="sitio-card-2 js-link" data-url="https://www.cambridge.org/">
+                        <i class="bi bi-link-45deg"></i>
+                        <div class="sitio-link">Cambridge University Press</div>
+                    </div>
+                    <div class="sitio-card-2 js-link" data-url="https://www.mathnet.ru/">
+                        <i class="bi bi-link-45deg"></i>
+                        <div class="sitio-link">MatNet Ru</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="sitio-card-2 js-link" data-url="https://www.conricyt.mx/">
+                        <i class="bi bi-link-45deg"></i>
+                        <div class="sitio-link">CONRICyT</div>
+                    </div>
+                    <div class="sitio-card-2 js-link" data-url="http://www.numdam.org/">
+                        <i class="bi bi-link-45deg"></i>
+                        <div class="sitio-link">NUMDAM</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="sitio-card-2 js-link" data-url="https://dml.cz/">
+                        <i class="bi bi-link-45deg"></i>
+                        <div class="sitio-link">Czech Digital Mathematics Library</div>
+                    </div>
+                    <div class="sitio-card-2 js-link" data-url="http://pldml.icm.edu.pl/pldml/">
+                        <i class="bi bi-link-45deg"></i>
+                        <div class="sitio-link">Polish Digital Mathematics Library</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="sitio-card-2 js-link" data-url="https://gdz.sub.uni-goettingen.de/">
+                        <i class="bi bi-link-45deg"></i>
+                        <div class="sitio-link">Göttinger Digitalisierungszentrum</div>
+                    </div>
+                    <div class="sitio-card-2 js-link" data-url="http://www.turpion.org/">
+                        <i class="bi bi-link-45deg"></i>
+                        <div class="sitio-link">Turpion</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}
+
+{% block javascripts %}
+
+    {{ parent() }}
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let items = document.getElementsByClassName("js-link")
+
+            for (let i = 0; i < items.length; i++) {
+                items[i].addEventListener('click', () => {
+                    location.href = items[i].dataset.url;
+                });
+            }
+        });
+    </script>
+{% endblock %}
+
+
