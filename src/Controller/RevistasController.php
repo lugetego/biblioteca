@@ -48,7 +48,7 @@ class RevistasController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="app_revistas_show", methods={"GET"})
+     * @Route("/{slug}", name="app_revistas_show", methods={"GET"})
      */
     public function show(Revistas $revista): Response
     {
@@ -58,7 +58,7 @@ class RevistasController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="app_revistas_edit", methods={"GET", "POST"})
+     * @Route("/{slug}/edit", name="app_revistas_edit", methods={"GET", "POST"})
      */
     public function edit(Request $request, Revistas $revista, RevistasRepository $revistasRepository): Response
     {

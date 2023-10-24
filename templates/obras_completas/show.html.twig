@@ -18,28 +18,25 @@
         </nav>
         <table class="table">
             <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ obras_completa.id }}</td>
-            </tr>
+
             <tr>
                 <th>Autor</th>
                 <td>{{ obras_completa.autor }}</td>
             </tr>
             <tr>
-                <th>Titulo</th>
+                <th>Título</th>
                 <td>{{ obras_completa.titulo }}</td>
             </tr>
             <tr>
-                <th>Url</th>
-                <td>{{ obras_completa.url }}</td>
+                <th>URL</th>
+                <td><a href="{{ obras_completa.url }}" target="_blank"> {{ obras_completa.url }}</a></td>
             </tr>
             <tr>
-                <th>Vol</th>
+                <th>Volúmen</th>
                 <td>{{ obras_completa.vol }}</td>
             </tr>
             <tr>
-                <th>Clasificacion</th>
+                <th>Clasificación</th>
                 <td>{{ obras_completa.clasificacion }}</td>
             </tr>
             </tbody>
