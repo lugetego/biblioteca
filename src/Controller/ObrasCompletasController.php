@@ -47,7 +47,7 @@ class ObrasCompletasController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="app_obras_completas_show", methods={"GET"})
+     * @Route("/{slug}", name="app_obras_completas_show", methods={"GET"})
      */
     public function show(ObrasCompletas $obrasCompleta): Response
     {
@@ -57,7 +57,7 @@ class ObrasCompletasController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="app_obras_completas_edit", methods={"GET", "POST"})
+     * @Route("/{slug}/edit", name="app_obras_completas_edit", methods={"GET", "POST"})
      */
     public function edit(Request $request, ObrasCompletas $obrasCompleta, ObrasCompletasRepository $obrasCompletasRepository): Response
     {

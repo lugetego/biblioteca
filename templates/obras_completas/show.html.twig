@@ -3,10 +3,14 @@
 {% block title %}ObrasCompletas{% endblock %}
 
 {% block body %}
-    <h1>ObrasCompletas</h1>
+    <div class="content-title">
+        <h1 class="mt-5">Obras completas</h1>
+        <div class="subtitle mb-5">Centro de Ciencias Matemáticas</div>
+    </div>
+    <div class="container">
 
-    <table class="table">
-        <tbody>
+        <table class="table">
+            <tbody>
             <tr>
                 <th>Id</th>
                 <td>{{ obras_completa.id }}</td>
@@ -31,12 +35,14 @@
                 <th>Clasificacion</th>
                 <td>{{ obras_completa.clasificacion }}</td>
             </tr>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
 
-    <a href="{{ path('app_obras_completas_index') }}">back to list</a>
+        <a href="{{ path('app_obras_completas_index') }}">back to list</a>
 
-    <a href="{{ path('app_obras_completas_edit', {'id': obras_completa.id}) }}">edit</a>
+        <a href="{{ path('app_obras_completas_edit', {'slug': obras_completa.slug}) }}">edit</a>
+        {{ include('obras_completas/_delete_form.html.twig') }}
+    </div>
 
-    {{ include('obras_completas/_delete_form.html.twig') }}
+
 {% endblock %}

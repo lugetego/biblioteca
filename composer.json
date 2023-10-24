@@ -27,7 +27,8 @@
         "symfony/webpack-encore-bundle": "^1.17",
         "symfony/yaml": "5.4.*",
         "twig/extra-bundle": "^3.7",
-        "twig/intl-extra": "^3.7"
+        "twig/intl-extra": "^3.7",
+        "twig/string-extra": "^3.7"
     },
     "require-dev": {
         "symfony/maker-bundle": "^1.43",
