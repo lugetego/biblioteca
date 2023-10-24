@@ -40,10 +40,7 @@ function populateArticles(articles) {
         const artAuthors = document.createElement("div");
         artAuthors.setAttribute('class', 'article-authors');
         artAuthors.innerHTML = article['author'];
-
-
         artItem.appendChild(artTitle);
-
         artItem.appendChild(artInfo);
         artItem.appendChild(artAuthors);
 

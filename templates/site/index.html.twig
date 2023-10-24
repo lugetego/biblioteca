@@ -212,7 +212,6 @@
 
 {% endblock %}
 
-
 {% block javascripts %}
 
     {{ parent() }}
@@ -221,17 +220,6 @@
     {{ encore_entry_script_tags('search') }}
     {{ encore_entry_script_tags('swiper') }}
     {{ encore_entry_script_tags('articles') }}
-    <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", () => {
-            let items = document.getElementsByClassName("js-link")
-
-            for (let i = 0; i < items.length; i++) {
-                items[i].addEventListener('click', () => {
-                    location.href = items[i].dataset.url;
-                });
-            }
-        });
-    </script>
 
 
 {% endblock %}
