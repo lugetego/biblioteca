@@ -11,7 +11,7 @@
         <div class="subtitle mb-5">Centro de Ciencias Matemáticas</div>
     </div>
 
-    <div class="container">
+    <div class="container mb-5">
         <table id="example" class="mt-5 table table-striped" style="width:100%">
             <thead>
             <tr>
@@ -34,7 +34,9 @@
                     <td>{{ obras_completa.clasificacion }}</td>
                     <td>
                         <a href="{{ path('app_obras_completas_show', {'slug': obras_completa.slug}) }}"><i class="fa fa-search"></i></a>
-                        <a href="{{ path('app_obras_completas_edit', {'slug': obras_completa.slug}) }}"><i class="fa-regular fa-edit"></i></a>
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <a href="{{ path('app_obras_completas_edit', {'slug': obras_completa.slug}) }}"><i class="fa-regular fa-edit"></i></a>
+                        {% endif %}
                     </td>
                 </tr>
             {% else %}
@@ -45,8 +47,9 @@
             </tbody>
         </table>
 
-
-        <a href="{{ path('app_obras_completas_new') }}">Create new</a>
+        {% if is_granted('ROLE_ADMIN') %}
+            <a href="{{ path('app_obras_completas_new') }}">Create new</a>
+        {% endif %}
     </div>
 {% endblock %}
 {% block javascripts %}
