@@ -10,8 +10,11 @@ function populateArticles(articles) {
         const artItem = document.createElement("div");
         artItem.setAttribute('class', 'articles-item');
 
+        let url="https://gaspacho.matmor.unam.mx/SRB/" + article['id']+"/show"
+        artItem.setAttribute("onclick","window.open('"+url+"'"+",'_blank')");
         const artTitle = document.createElement("div");
-        artTitle.setAttribute('class', 'article-title');
+        artTitle.setAttribute('class', 'article-title ');
+
         artTitle.innerHTML = article['title'];
 
         let info = "";
@@ -38,13 +41,15 @@ function populateArticles(articles) {
         artAuthors.setAttribute('class', 'article-authors');
         artAuthors.innerHTML = article['author'];
 
+
         artItem.appendChild(artTitle);
+
         artItem.appendChild(artInfo);
         artItem.appendChild(artAuthors);
 
         container.appendChild(artItem);
-    }
 
+    }
 
 }
 
