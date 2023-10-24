@@ -34,6 +34,7 @@ Encore
     .addEntry('app', './assets/app.js')
     .addEntry('search', './assets/search.js')
     .addEntry('swiper', './assets/swiper.js')
+    .addEntry('articles', './assets/articles.js')
 
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)

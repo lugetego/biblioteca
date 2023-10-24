@@ -20,7 +20,6 @@
             </div>
         </div>
     </div>
-
     <section id="alerta-bibliográfica">
         <div class="container">
             <h1>Alerta Bibliográfica</h1>
@@ -208,39 +207,9 @@
     </section>
 
     <section id="articles">
-        <div class="container">
-            <h1>Artículos publicados</h1>
-            <div class="subtitle mb-5">Últimos artículos publicados</div>
-            <div class="articles-container">
-                <div class="articles-item">
-                    <div class="article-title">Dissecting the square into seven or nine congruent parts</div>
-                    <div class="article-info">Discrete Mathematics, Vol. 345, Issue 5, 2022, p. 112800</div>
-                    <div class="article-authors">Maldonado, Gerardo L.; Roldán-Pensado, Edgardo</div>
-                </div>
-                <div class="articles-item">
-                    <div class="article-title">On the algebraic K-theory of orientable 3-manifold groups</div>
-                    <div class="article-info">Journal of Pure and Applied Algebra, Vol. 226, Issue 7, 2022, p. 106981</div>
-                    <div class="article-authors">Juan-Pineda, Daniel; Sánchez Saldaña, Luis Jorge</div>
-                </div>
-                <div class="articles-item">
-                    <div class="article-title">Modified scattering for the nonlinear nonlocal Schrödinger equation in one-dimensional case</div>
-                    <div class="article-info">Zeitschrift für Angewandte Mathematik und Physik, Vol. 73, Issue 1, 2022, p.2</div>
-                    <div class="article-authors">Hayashi, Nakao; Naumkin, Pavel I.</div>
-                </div>
-                <div class="articles-item">
-                    <div class="article-title">Maximal almost disjoint families and pseudocompactness of hyperspaces</div>
-                    <div class="article-info">Topology and its Applications, Vol. 305, 2022, p. 107872</div>
-                    <div class="article-authors">Guzmán, O.; Hrusak, M.; Rodrigues, V. O.; Todorcevic, S.; Tomita, A. H.</div>
-                </div>
-                <div class="articles-item">
-                    <div class="article-title">A preprojective Auslander-Reiten component for the socle projective modules of some right-peak algebras</div>
-                    <div class="article-info">Boletín de la Sociedad Matemática Mexicana, Vol. 28, Issue 1, 2022, p. 15</div>
-                    <div class="article-authors">Bautista, R., Dorado, I.;</div>
-                </div>
-            </div>
+        <div class="articles-container container" id="articles-container">
         </div>
     </section>
-
 
 {% endblock %}
 
@@ -252,5 +221,7 @@
 
     {{ encore_entry_script_tags('search') }}
     {{ encore_entry_script_tags('swiper') }}
+    {{ encore_entry_script_tags('articles') }}
+
 {% endblock %}
 
