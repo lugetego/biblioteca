@@ -23,7 +23,7 @@ security:
                 login_path: login
                 check_path: login
                 enable_csrf: true
-                default_target_path: app_registro_index
+                default_target_path: app_site_index
                 failure_path: login
             logout:
                 path: logout

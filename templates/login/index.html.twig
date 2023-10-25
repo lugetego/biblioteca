@@ -5,7 +5,7 @@
 
 {% block body %}
 
-    <div class="form-signin container mt-5">
+    <div class="form-signin container mt-5 mb-5">
 
         <h1 class="h3 mb-3 font-weight-normal text-center">Iniciar sesión</h1>
 
@@ -27,9 +27,11 @@
             {% if error %}
                 <div class="m-2 text-danger text-center"><i class="fas fa-times"></i> {{ error.messageKey|trans(error.messageData, 'security') }}</div>
             {% endif %}
-            <button class="btn btn-primary form-signin" type="submit">
+
+            <button class="btn btn-dark form-signin" type="submit">
                 <i class="fas fa-sign-in-alt"></i> Iniciar sesión
             </button>
+
         </form>
 
     </div>

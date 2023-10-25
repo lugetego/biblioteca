@@ -54,6 +54,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('app_site_contacto') }}">Contacto</a>
                     </li>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('logout') }}">Cerrar sesión</a>
+                        </li>
+                    {% endif %}
                 {% endblock %}
             </ul>
         </div>

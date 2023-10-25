@@ -3,7 +3,6 @@
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
 {% endblock %}
 {% block nav %}
     <li class="nav-item">
@@ -28,6 +27,11 @@
     <li class="nav-item">
         <a class="nav-link" href="{{ path('app_site_contacto') }}">Contacto</a>
     </li>
+    {% if is_granted('ROLE_ADMIN') %}
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('logout') }}">Cerrar sesión</a>
+        </li>
+    {% endif %}
 {% endblock %}
 
 {% block body %}
