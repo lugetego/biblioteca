@@ -52,7 +52,7 @@ function populateArticles(articles) {
 
 async function logArticles() {
     try {
-        const response = await fetch("https://gaspacho.matmor.unam.mx/SRBexport/app_dev.php/export/2023/5", {
+        const response = await fetch("https://gaspacho.matmor.unam.mx/SRBexport/app_dev.php/export/5", {
             mode: "cors",
             headers: {
                 accept: 'application/json',
