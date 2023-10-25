@@ -31,4 +31,12 @@ class SiteController extends AbstractController
     {
         return $this->render('site/recursos.html.twig');
     }
+
+    /**
+     * @Route("/contacto", name="app_site_contacto")
+     */
+    public function contacto(): Response
+    {
+        return $this->render('site/contacto.html.twig');
+    }
 }
