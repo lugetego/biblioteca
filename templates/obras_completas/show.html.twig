@@ -43,10 +43,14 @@
         </table>
 
         {% if is_granted('ROLE_ADMIN') %}
-            <a href="{{ path('app_obras_completas_index') }}">back to list</a>
-            <a href="{{ path('app_obras_completas_edit', {'slug': obras_completa.slug}) }}">edit</a>
-            {{ include('obras_completas/_delete_form.html.twig') }}
+            <div class="container">
+                <div class="row row-cols-auto">
+                    <div class="col"><a class="btn btn-dark" href="{{ path('app_obras_completas_edit', {'slug': obras_completa.slug}) }}"><i class="fa fa-edit"></i> Modificar</a></div>
+                    <div class="col">{{ include('obras_completas/_delete_form.html.twig') }}</div>
+                </div>
+            </div>
         {% endif %}
+
     </div>
 
 

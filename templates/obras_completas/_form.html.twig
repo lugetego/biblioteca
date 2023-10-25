@@ -1,4 +1,48 @@
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+<div class="container">
+    {{ form_start(form) }}
+    <div class="form-control mb-5">
+        <div class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">{{ form_label(form.autor, 'Autor') }}</label>
+                    {{ form_widget(form.autor, {'attr': {'class': 'form-control','placeholder':'Autor'}}) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">{{ form_label(form.titulo, 'Título') }}</label>
+                    {{ form_widget(form.titulo, {'attr': {'class': 'form-control','placeholder':'Título'}}) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">{{ form_label(form.url, 'URL') }}</label>
+                    {{ form_widget(form.url, {'attr': {'class': 'form-control','placeholder':'URL'}}) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">{{ form_label(form.vol, 'Volúmen') }}</label>
+                    {{ form_widget(form.vol, {'attr': {'class': 'form-control','placeholder':'Volúmen'}}) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">{{ form_label(form.vol, 'Clasificación') }}</label>
+                    {{ form_widget(form.clasificacion, {'attr': {'class': 'form-control','placeholder':'Clasificación'}}) }}
+                </div>
+            </div>
+        </div>
+        {{ form_widget(form) }}
+        <button class="mt-2 btn btn-dark"> <i class="fa-regular fa-paper-plane"></i> {{ button_label|default('Guardar') }}</button>
+        {{ form_end(form) }}
+    </div>
+</div>

@@ -1,13 +1,47 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit ObrasCompletas{% endblock %}
+{% block title %}Modificar obra{% endblock %}
+{% block nav %}
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="{{ path('app_site_index') }}">Inicio</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ path('app_site_nosotros') }}">Nosotros</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ path('app_site_recursos') }}">Recursos</a>
+    </li>
+    <div class="dropdown">
+        <button class="nav-link active d-flex align-content-center dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Catálogos
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://ccm.bibliotecas.unam.mx:82/" target="_blank">Catálogos electrónicos</a></li>
+            <li><a class="dropdown-item" href="{{ path('app_obras_completas_index') }}">Obras completas</a></li>
+            <li><a class="dropdown-item" href="{{ path('app_revistas_index') }}">Revistas electrónicas</a></li>
+        </ul>
+    </div>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ path('app_site_contacto') }}">Contacto</a>
+    </li>
+    {% if is_granted('ROLE_ADMIN') %}
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('logout') }}">Cerrar sesión</a>
+        </li>
+    {% endif %}
+{% endblock %}
+
 
 {% block body %}
-    <h1>Edit ObrasCompletas</h1>
+    <div class="container">
+        <h1 class="mt-2">Modificar obra</h1>
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ path('app_obras_completas_index') }}">Regresar </a></li>
+                <li class="breadcrumb-item active" aria-current="page">Modificar</li>
+            </ol>
+        </nav>
+    </div>
+    {{ include('obras_completas/_form.html.twig', {'button_label': 'Actualizar'}) }}
 
-    {{ include('obras_completas/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('app_obras_completas_index') }}">back to list</a>
-
-    {{ include('obras_completas/_delete_form.html.twig') }}
 {% endblock %}

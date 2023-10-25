@@ -78,8 +78,9 @@
         </table>
 
         {% if is_granted('ROLE_ADMIN') %}
-            <a href="{{ path('app_obras_completas_new') }}">Create new</a>
+            <a class="mt-5 btn btn-dark" href="{{ path('app_obras_completas_new') }}"><i class="fa-regular fa-add"></i> Nueva obra</a>
         {% endif %}
+
     </div>
 {% endblock %}
 {% block javascripts %}
