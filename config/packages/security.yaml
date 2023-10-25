@@ -48,6 +48,7 @@ security:
         - { path: ^/revistas/.+/edit, roles: ROLE_ADMIN }
         - { path: ^/obras-completas/new, roles: ROLE_ADMIN }
         - { path: ^/obras-completas/.+/edit, roles: ROLE_ADMIN }
+        - { path: ^/sitios/, roles: ROLE_ADMIN }
         - { path: ^/sitios/new, roles: ROLE_ADMIN }
         - { path: ^/sitios/.+/edit, roles: ROLE_ADMIN }
 
