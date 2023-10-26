@@ -1,7 +1,10 @@
 {% extends 'base.html.twig' %}
 {% block stylesheets %}
     {{ parent() }}
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
 {% endblock %}
 
 {% block body %}
@@ -20,11 +23,11 @@
         </div>
     </div>
     <section id="alerta-bibliográfica">
-        <div class="container">
+        <div class="container-fluid">
             <h1>Alerta Bibliográfica</h1>
             <div class="subtitle mb-5">Libros de reciente adquisición</div>
 
-            <div class="swiper bibSwiper">
+            <div class="swiper bibSwiper d-flex">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="book-container">
@@ -157,7 +160,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="book-container">
-                            <img src="{{ asset('build/images/alerta-2023-1/numerical-methods.png')}}" class="img-responsive book-image" alt="book cover">
+                            <img src="{{ asset('build/images/alerta-2023-1/numerical-methods.png')}}" class="img-responsive book-image swiper-slide" alt="book cover">
                             <div class="book-title">
                                 Numerical methods for fractional differentiation
                             </div>
@@ -179,22 +182,22 @@
 
     <section id="resources">
         <div class="container">
-            <div class="d-flex flex-xs-column justify-content-center">
-                <div class="resources-item flex-column">
-                    <div class="resources-title">Acceso Remoto<br></div>
+            <div class="d-flex flex-row flex-sm-row flex-md-column flex-lg-row justify-content-center">
+                <div class="resources-item flex-column mb-5">
+                    <div class="resources-title ">Acceso Remoto<br></div>
                     <p>Si eres alumno vigente, profesor o académico en la UNAM, puedes aprovechar nuestros recursos electrónicos desde cualquier equipo con conexión a internet.</p>
                     <div class="d-flex justify-content-end">
                         <a href="https://bidi.unam.mx/index.php/ayuda/servicio-de-acceso-remoto" class="link-warning">Ver más</a>
                     </div>
                 </div>
-                <div class="resources-item flex-column lateral-borders">
+                <div class="resources-item flex-column lateral-borders mb-5">
                     <div class="resources-title">Dirección general de bibliotecas UNAM</div>
                     <p>Coordina el Sistema Bibliotecario y de Información de la Universidad Nacional Autónoma de México (SIBIUNAM).</p>
                     <div class="d-flex justify-content-end">
                         <a href="https://www.dgb.unam.mx/" class="link-warning">Ver más</a>
                     </div>
                 </div>
-                <div class="resources-item flex-column">
+                <div class="resources-item flex-column mb-5">
                     <div class="resources-title">Sistema de referencias bibliográficas</div>
                     <p>Repositorio que concentra, preserva y resgurada la producción científica de cada uno de los académicos del CCM.</p>
                     <div class="d-flex justify-content-end">
