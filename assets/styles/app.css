@@ -356,6 +356,8 @@ textarea{
     font-style: normal;
     font-weight: 400;
     line-height: 26px; /* 150% */
+    width: 50%;
+
 }
 
 .statement {
@@ -370,6 +372,7 @@ textarea{
     font-weight: 700;
     line-height: normal;
     margin-right: 52px;
+    width: 25%;
 }
 
 #gallery {
@@ -655,7 +658,7 @@ textarea{
     .book-container {
         max-width: 30%;
         align-content: center;
-       margin: auto;
+        margin: auto;
 
     }
     .book-title {
@@ -682,6 +685,29 @@ textarea{
         justify-content: flex-start;
         margin-bottom: 5px;
     }
+    .content {
+        color: #282828;
+        text-align: justify;
+        font-size: 30px;
+        font-style: normal;
+        line-height: 50px;
+        width: 100%;
+        margin-bottom: 10px;
+
+    }
+    .mision-vision-title {
+        color: #B80;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-right: 52px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+
 }
 
 @media (min-width: 992px){
