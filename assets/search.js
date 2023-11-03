@@ -7,4 +7,6 @@ function searchSubmit(event) {
 }
 
 const form = document.getElementById("search-form");
+const coverflow = document.getElementById("#coverflow");
+
 form.addEventListener("submit", searchSubmit);
