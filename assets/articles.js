@@ -32,6 +32,15 @@ function populateArticles(articles) {
         if(article['pages'] !== null) {
             info = info+ ", p. " + article["pages"];
         }
+        if(article['yearPub'] !== null) {
+            info = info+ ", año " + article["yearPub"];
+        }
+        if(article['yearPreprint'] !== null) {
+            info = info+ "Año " + article["yearPreprint"];
+        }
+        if(article['type'] !== null) {
+            info = info+ ", " + article["type"];
+        }
 
         artInfo.innerHTML = info;
         //artInfo.innerHTML = "".concat(article['journal'], ", Vol. ", article["volume"], ", Issue ", article["issue"], ", ", article["year"], ", p. ", article["pages"]);
@@ -41,8 +50,8 @@ function populateArticles(articles) {
         artAuthors.setAttribute('class', 'article-authors');
         artAuthors.innerHTML = article['author'];
         artItem.appendChild(artTitle);
-        artItem.appendChild(artInfo);
         artItem.appendChild(artAuthors);
+        artItem.appendChild(artInfo);
 
         container.appendChild(artItem);
 

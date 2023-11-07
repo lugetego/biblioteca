@@ -48,6 +48,15 @@
 
         <div class="container">
             <div class="bd-container">
+                <div class="d-flex js-link" data-url="https://mathscinet.ams.org/mathscinet/publications-search">
+                    <div class="bd-image d-flex align-items-center"><img src="{{ asset('build/images/mathscinet.png')}}" alt="Mathscinet"></div>
+                    <div class="d-flex flex-column">
+                        <div class="bd-title">Mathscinet</div>
+                        <div class="bd-content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bd-container">
                 <div class="d-flex js-link" data-url="https://zbmath.org/">
                     <div class="bd-image d-flex align-items-center"><img src="{{ asset('build/images/zbmath.png')}}" alt="Zentralblatt image"></div>
                     <div class="d-flex flex-column">
@@ -78,13 +87,13 @@
                 <div class="d-flex js-link" data-url="https://gaspacho.matmor.unam.mx/SRB/">
                     <div class="bd-image d-flex align-items-center"> <img src="{{ asset('build/images/SRB.png')}}" alt="SRB image"></div>
                     <div class="d-flex flex-column">
-                        <div class="bd-title">Sistema de Referencias Bibliográficos</div>
+                        <div class="bd-title">Sistema de Referencias Bibliográficas</div>
                         <div class="bd-content">Repositorio  que concentra, preserva y resguarda la producción científica de los académicos en el CCM.</div>
                     </div>
                 </div>
             </div>
             <div class="bd-container">
-                <div class="d-flex js-link" data-url="">
+                <div class="d-flex js-link" data-url="https://ui.adsabs.harvard.edu/">
                     <div class="bd-image d-flex align-items-center"><img src="{{ asset('build/images/ads.png')}}" alt="ADS image"></div>
                     <div class="d-flex flex-column">
                         <div class="bd-title">ADS/Nasa</div>
@@ -149,8 +158,8 @@
 
             </div>
             <div class="col-12 col-sm-6">
-                <div class="d-flex flex-column justify-content-begin" data-url="https://www.springer.com/de">
-                    <div class="editorial d-flex align-items-center js-link">
+                <div class="d-flex flex-column justify-content-begin">
+                    <div class="editorial d-flex align-items-center js-link" data-url="https://link.springer.com/">
                         <div class="editorial-logo d-flex justify-content-center"><img src="{{ asset('build/images/editoriales/Springer.png')}}" alt="Springer logo"></div>
                         <div class="editorial-name">Springer Verlang</div>
                     </div>
@@ -231,9 +240,9 @@
                 </div>
 
                 <div class="d-flex justify-content-center">
-                    <div class="sitio-card-2 js-link" data-url="https://services.acm.org/">
+                    <div class="sitio-card-2 js-link" data-url="https://www.acm.org/">
                         <i class="bi bi-link-45deg"></i>
-                        <div class="sitio-link">Machinery (ACM)</div>
+                        <div class="sitio-link">Association for Computing Machinery (ACM)</div>
                     </div>
                     <div class="sitio-card-2 js-link" data-url="https://www.iop.org/">
                         <i class="bi bi-link-45deg"></i>
@@ -316,7 +325,7 @@
 
             for (let i = 0; i < items.length; i++) {
                 items[i].addEventListener('click', () => {
-                    location.href = items[i].dataset.url;
+                    window.open(items[i].dataset.url);
                 });
             }
         });
