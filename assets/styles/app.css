@@ -615,6 +615,14 @@ textarea{
     font-size: 18px;
 }
 
+.contacto-foto {
+    margin-bottom: 12px;
+}
+
+.contacto-funcion {
+    font-size: 24px;
+}
+
 .contacto-nombre {
     color: #02294C;
     font-weight: 500;
