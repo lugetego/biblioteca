@@ -51,6 +51,17 @@ security:
         - { path: ^/sitios/, roles: ROLE_ADMIN }
         - { path: ^/sitios/new, roles: ROLE_ADMIN }
         - { path: ^/sitios/.+/edit, roles: ROLE_ADMIN }
+        - { path: ^/libro/new, roles: ROLE_ADMIN }
+        - { path: ^/libro/alerta/.+, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/libro/.+/edit, roles: ROLE_ADMIN }
+        - { path: ^/libro/.+, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/libro/.+/edit, roles: ROLE_ADMIN }
+        - { path: ^/alerta/ultima, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/alerta/.+/edit, roles: ROLE_ADMIN }
+        - { path: ^/alerta/new, roles: ROLE_ADMIN }
+        - { path: ^/alerta/.+, roles: ROLE_ADMIN }
+        #- { path: ^/register, roles: ROLE_ADMIN }
+
 
 when@test:
     security:

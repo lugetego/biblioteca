@@ -1,0 +1,26 @@
+<div class="container">
+    {{ form_start(form) }}
+    <div class="form-control mb-5">
+        <div class="row">
+            <div class="col-4">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">{{ form_label(form.numero, 'Número de alerta') }}</label>
+                    {{ form_widget(form.numero, {'attr': {'class': 'form-control','placeholder':'Número de alerta'}}) }}
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">{{ form_label(form.anio, 'Año') }}</label>
+                    {{ form_widget(form.anio, {'attr': {'class': 'form-control','placeholder':'Año'}}) }}
+                </div>
+            </div>
+        </div>
+
+
+        {{ form_widget(form) }}
+        <button class="mt-2 btn btn-dark"> {{ button_label|default('Guardar') }}</button>
+        <a href="{{ path('app_alerta_index') }}" class="mt-2 btn btn-secondary"> <i class="fa-regular fa-times-circle-o"></i> Cancelar</a>
+        {{ form_end(form) }}
+
+    </div>
+</div>

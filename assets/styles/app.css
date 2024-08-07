@@ -234,6 +234,14 @@ textarea{
     text-align: left;
 }
 
+.book-clasificacion {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: black;
+    text-align: left;
+}
+
 #resources {
     background-color: #002550;
     padding: 60px 0;

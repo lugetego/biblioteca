@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Alerta Bibliográfica{% endblock %}
+
+{% block nav %}
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="{{ path('app_site_index') }}">Inicio</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ path('app_site_nosotros') }}">Nosotros</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ path('app_site_recursos') }}">Recursos</a>
+    </li>
+    <div class="dropdown">
+        <button class="nav-link active  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Alerta Bibliográfica
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{ path('app_alerta_ultima') }}">Última Alerta</a></li>
+            <li><a class="dropdown-item" href="{{ path('app_alerta_index') }}">Alertas Anteriores</a></li>
+            <li><a class="dropdown-item" href="{{ path('app_libro_index') }}">Libros</a></li>
+        </ul>
+    </div>
+    <div class="dropdown">
+        <button class="nav-link d-flex align-content-center dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Catálogos
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://ccm.bibliotecas.unam.mx:82/" target="_blank">Catálogos electrónicos</a></li>
+            <li><a class="dropdown-item" href="{{ path('app_obras_completas_index') }}">Obras completas</a></li>
+            <li><a class="dropdown-item" href="{{ path('app_revistas_index') }}">Revistas electrónicas</a></li>
+        </ul>
+    </div>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ path('app_site_contacto') }}">Contacto</a>
+    </li>
+    {% if is_granted('ROLE_ADMIN') %}
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('logout') }}">Cerrar sesión</a>
+        </li>
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+
+    <h1 class="mt-4 mb-4">Alerta Bibliográfica No. {{ alertas.numero }} </h1>
+    <div class="container mb-5 mt-5">
+
+                <div class="row row-cols-auto">
+                    {% for libro in alertas.libro %}
+                        <div class="col">
+                            <div class="book-container">
+                                <a href="{{libro.url}}" target="_blank">
+                                    <img src="{{ vich_uploader_asset(libro, 'portadaFile')}}" class="img-responsive book-image" alt="book cover">
+                                </a>
+                                <div class="book-title">
+                                    {{ libro.titulo }}
+                                </div>
+                                <div class="book-info">
+                                    <div class="book-author">
+                                        {{ libro.autor }}
+                                    </div>
+                                    <div class="book-editorial">
+                                        {{ libro.editorial }}, {{ libro.anio }}
+                                    </div>
+                                    <div class="book-clasificacion">
+                                        {{ libro.clasificacion }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {%endfor%}
+                </div>
+            </div>
+
+{% endblock %}

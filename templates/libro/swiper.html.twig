@@ -1,0 +1,41 @@
+<section id="alerta-bibliográfica">
+    <div class="container-fluid">
+        <h1>Alerta Bibliográfica</h1>
+        <div class="subtitle mb-5">Libros de reciente adquisición</div>
+
+
+        <div class="swiper bibSwiper d-flex">
+            <div class="swiper-wrapper">
+                {% for libro in libros %}
+
+                    {%if libro.slide == 1 %}
+                        <div class="swiper-slide">
+                            <div class="book-container">
+                                <a href="{{libro.url}}" target="_blank">
+                                    <img src="{{ vich_uploader_asset(libro, 'portadaFile')}}" class="img-responsive book-image" alt="book cover">
+                                </a>
+                                <div class="book-title">
+                                    {{ libro.titulo }}
+                                </div>
+                                <div class="book-info">
+                                    <div class="book-author">
+                                        {{ libro.autor }}
+                                    </div>
+                                    <div class="book-editorial">
+                                        {{ libro.editorial }}, {{ libro.anio }}
+                                    </div>
+                                    <div class="book-clasificacion">
+                                        {{ libro.clasificacion }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
