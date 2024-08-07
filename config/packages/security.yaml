@@ -60,7 +60,7 @@ security:
         - { path: ^/alerta/.+/edit, roles: ROLE_ADMIN }
         - { path: ^/alerta/new, roles: ROLE_ADMIN }
         - { path: ^/alerta/.+, roles: ROLE_ADMIN }
-        #- { path: ^/register, roles: ROLE_ADMIN }
+        - { path: ^/register, roles: ROLE_ADMIN }
 
 
 when@test:
