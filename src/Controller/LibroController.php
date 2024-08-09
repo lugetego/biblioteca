@@ -89,6 +89,8 @@ class LibroController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $libro->setModified(new \DateTime());
+
             $libroRepository->add($libro, true);
 
             return $this->redirectToRoute('app_libro_index', [], Response::HTTP_SEE_OTHER);
