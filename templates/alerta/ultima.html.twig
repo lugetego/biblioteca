@@ -45,11 +45,11 @@
 {% block body %}
 
     <h1 class="mt-4 mb-4">Alerta Bibliográfica No. {{ alertas.numero }} </h1>
-    <div class="container mb-5 mt-5">
+    <div class="container-fluid mb-5 mt-5">
 
                 <div class="row row-cols-auto">
                     {% for libro in alertas.libro %}
-                        <div class="col-3 mb-3">
+                        <div class="col-2 mb-3">
                             <div class="book-container">
                                 <a href="{{libro.url}}" target="_blank">
                                     <img src="{{ vich_uploader_asset(libro, 'portadaFile')}}" class="img-responsive book-image" alt="book cover">
