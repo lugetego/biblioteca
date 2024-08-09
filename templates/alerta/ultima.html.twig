@@ -55,7 +55,7 @@
                                     <img src="{{ vich_uploader_asset(libro, 'portadaFile')}}" class="img-responsive book-image" alt="book cover">
                                 </a>
                                 <div class="book-title">
-                                    {{ libro.titulo|slice(0,15) }}
+                                    {{ libro.titulo|truncate(20) }}
                                 </div>
                                 <div class="book-info">
                                     <div class="book-author">
