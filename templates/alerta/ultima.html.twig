@@ -55,7 +55,11 @@
                                     <img src="{{ vich_uploader_asset(libro, 'portadaFile')}}" class="img-responsive book-image" alt="book cover">
                                 </a>
                                 <div class="book-title">
-                                    {{ libro.titulo|slice(0,19) ~ ' ...' }}
+                                    {% if libro.titulo|lenght > 20 %}
+                                        {{ libro.titulo|slice(0,19) ~ ' ...' }}
+                                    {% else %}
+                                        {{ libro.titulo }}
+                                    {% endif %}
                                 </div>
                                 <div class="book-info">
                                     <div class="book-author">
