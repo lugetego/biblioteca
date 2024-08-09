@@ -49,7 +49,7 @@
 
                 <div class="row row-cols-auto">
                     {% for libro in alertas.libro %}
-                        <div class="col-3">
+                        <div class="col-3 mb-3">
                             <div class="book-container">
                                 <a href="{{libro.url}}" target="_blank">
                                     <img src="{{ vich_uploader_asset(libro, 'portadaFile')}}" class="img-responsive book-image" alt="book cover">
