@@ -83,8 +83,8 @@ class Libro
     private $modified;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Alerta::class, inversedBy="libro")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\ManyToOne(targetEntity=Alerta::class, inversedBy="libro"))
+     * @ORM\JoinColumn(nullable=true)
      */
     private $alerta;
 
@@ -97,6 +97,11 @@ class Libro
      * @ORM\Column(type="string", length=255)
      */
     private $clasificacion;
+
+    /**
+     * @ORM\Column(type="string", length=30)
+     */
+    private $isbn;
 
     /**
      * @ORM\Column(type="boolean", nullable=true)
@@ -301,6 +306,23 @@ class Libro
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getIsbn()
+    {
+        return $this->isbn;
+    }
+
+    /**
+     * @param mixed $isbn
+     */
+    public function setIsbn($isbn): void
+    {
+        $this->isbn = $isbn;
+    }
+
 
 
 }

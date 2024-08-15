@@ -9,7 +9,6 @@ use Doctrine\ORM\Mapping\Entity;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -19,7 +18,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Vich\UploaderBundle\Form\Type\VichFileType;
 
-class LibroType extends AbstractType
+class LibroEditType extends AbstractType
 {
 
     public function buildForm(FormBuilderInterface $builder, array $options): void
@@ -46,10 +45,10 @@ class LibroType extends AbstractType
                 },
                 'choice_label' => 'numero',
                 'required'=>true,
+                'empty_data'=>null,
+                'placeholder' => 'Choose an option', // Placeholder text
                 ])
-            ->add('slide', CheckboxType::class, [
-                'required'=>false,
-            ])
+            ->add('slide')
 
         ;
 
@@ -58,7 +57,7 @@ class LibroType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-           'data_class' => null,
+           'data_class' => Libro::class,
 
         ]);
     }
