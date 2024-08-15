@@ -91,7 +91,7 @@ class AlertaController extends AbstractController
      */
     public function delete(Request $request, Alerta $alertum, AlertaRepository $alertaRepository): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$alertum->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete'.$alertum->getSlug(), $request->request->get('_token'))) {
             $alertaRepository->remove($alertum, true);
         }
 
