@@ -146,7 +146,7 @@
             const form = isbnInput.closest('form');
             if (form) {
                 isbnInput.addEventListener('input', function() {
-                    if (isbnInput.value.length === 10 ||isbnInput.value.length === 13) {
+                    if (isbnInput.value.length === 13) {
                         // Create a hidden input to add to the form
                         let hiddenInput = document.createElement('input');
                         hiddenInput.type = 'hidden';
