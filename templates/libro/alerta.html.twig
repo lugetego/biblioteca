@@ -66,7 +66,9 @@
                 <th>Editorial</th>
                 <th class="text-center">Año</th>
                 <th class="text-center">No. alerta</th>
-                <th class="text-center">Mostrar</th>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <th class="text-center">Mostrar</th>
+                {% endif %}
                 <th></th>
             </tr>
             </thead>
@@ -77,12 +79,14 @@
                     <td>{{ libro.editorial }}</td>
                     <td class="text-center">{{ libro.anio }}</td>
                     <td class="text-center">{{ libro.alerta.numero }}</td>
-                    <td class="text-center">{{ libro.slide ? 'Sí' : 'No' }}</td>
-                    <td>
-                        <a href="{{ path('app_libro_show', {'slug': libro.slug}) }}"><i class="fa fa-search"></i></a>
-                        {% if is_granted('ROLE_ADMIN') %}
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <td class="text-center">{{ libro.slide ? 'Sí' : 'No' }}</td>
+                    {% endif %}
+                        <td>
+                            <a href="{{ path('app_libro_show', {'slug': libro.slug}) }}"><i class="fa fa-search"></i></a>
+                    {% if is_granted('ROLE_ADMIN') %}
                             <a href="{{ path('app_libro_edit', {'slug': libro.slug}) }}"><i class="fa-regular fa-edit"></i></a>
-                        {% endif %}
+                    {% endif %}
                     </td>
 
                 </tr>
