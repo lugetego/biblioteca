@@ -29,7 +29,9 @@ class LibroEditType extends AbstractType
             ->add('editorial')
             ->add('url')
             ->add('anio')
-            ->add('clasificacion')
+            ->add('clasificacion', TextType::class, [
+                'required'=> false,
+            ])
             ->add('isbn')
             ->add('portadaFile', VichFileType::class, [
                 'required' => false,
