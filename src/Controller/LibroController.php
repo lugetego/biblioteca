@@ -49,7 +49,7 @@ class LibroController extends AbstractController
     public function alerta(AlertaRepository $alertaRepository, $alerta): Response
     {
         // Find the alerta entity
-        $alerta = $alertaRepository->find($alerta);
+        $alerta = $alertaRepository->findBySlug($alerta);
 
         if (!$alerta) {
             throw $this->createNotFoundException('No alerta found id ' . $alerta);
