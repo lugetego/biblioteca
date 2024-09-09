@@ -52,7 +52,7 @@ class LibroController extends AbstractController
         $alerta = $alertaRepository->find($alerta);
 
         if (!$alerta) {
-            throw $this->createNotFoundException('No author found for id ' . $alerta);
+            throw $this->createNotFoundException('No alerta found id ' . $alerta);
         }
 
         // Access the associated books

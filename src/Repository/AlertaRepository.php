@@ -9,7 +9,7 @@ use Doctrine\Persistence\ManagerRegistry;
 /**
  * @extends ServiceEntityRepository<Alerta>
  *
- * @method Alerta|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Alerta|null find($slug, $lockMode = null, $lockVersion = null)
  * @method Alerta|null findOneBy(array $criteria, array $orderBy = null)
  * @method Alerta[]    findAll()
  * @method Alerta[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
