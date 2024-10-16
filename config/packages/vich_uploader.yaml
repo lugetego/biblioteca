@@ -12,3 +12,8 @@ vich_uploader:
             upload_destination: '%kernel.project_dir%/public/alerta'
             namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
 
+        boletin_file:
+            uri_prefix: /boletin
+            upload_destination: '%kernel.project_dir%/public/boletin'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+

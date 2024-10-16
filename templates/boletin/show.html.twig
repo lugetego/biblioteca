@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Boletin{% endblock %}
+
+{% block body %}
+    {% set months = {
+        1: 'Enero',
+        2: 'Febrero',
+        3: 'Marzo',
+        4: 'Abril',
+        5: 'Mayo',
+        6: 'Junio',
+        7: 'Julio',
+        8: 'Agosto',
+        9: 'Septiembre',
+        10: 'Octubre',
+        11: 'Noviembre',
+        12: 'Diciembre'
+    } %}
+
+    <div class="mt-4 mb-4">
+        <h1 >Boletín {{boletin.numero}} - {{ months[boletin.mes] is defined ? months[boletin.mes] : 'Desconocido' }} - {{ boletin.anio }}</h1>
+    </div>
+
+    <div class="container mb-5">
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                {#                <li class="breadcrumb-item"><a href="{{ path('app_libro_alerta',{'alerta':libro.alerta.slug}) }}">Regresar </a></li>#}
+                <li class="breadcrumb-item"><a href="{{ path('app_boletin_index') }}">Regresar </a></li>
+
+                <li class="breadcrumb-item active" aria-current="page">{{ boletin.slug }}</li>
+            </ol>
+        </nav>
+
+        <table class="table">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ boletin.id }}</td>
+            </tr>
+            <tr>
+                <th>Número</th>
+                <td>{{ boletin.numero }}</td>
+            </tr>
+            <tr>
+                <th>Mes</th>
+                <td>{{ months[boletin.mes] is defined ? months[boletin.mes] : 'Desconocido' }}</td>
+            </tr>
+            <tr>
+                <th>Año</th>
+                <td>{{ boletin.anio }}</td>
+            </tr>
+            <tr>
+                <th>Url</th>
+                <td>{{ boletin.url }}</td>
+            </tr>
+            <tr>
+                <th>Imagen</th>
+                <td>
+                    <div class="book-container">
+                        <img src="{{ vich_uploader_asset(boletin, 'boletinFile')}}" class="img-responsive book-image" alt="boletin cover">
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    {% if is_granted('ROLE_ADMIN') %}
+        <div class="container mb-5">
+            <div class="row row-cols-auto">
+                <div class="col"><a class="btn btn-dark" href="{{ path('app_boletin_edit', {'slug': boletin.slug}) }}"><i class="fa fa-edit"></i> Modificar</a></div>
+                <div class="col">{{ include('boletin/_delete_form.html.twig') }}</div>
+            </div>
+        </div>
+    {% endif %}
+
+
+{% endblock %}

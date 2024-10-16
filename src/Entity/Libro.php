@@ -241,7 +241,6 @@ class Libro
         $this->modified = $modified;
     }
 
-
     /**
      * @ORM\PrePersist
      */
