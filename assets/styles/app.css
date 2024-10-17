@@ -341,6 +341,7 @@ textarea{
     background-size: cover;
     position: relative;
     padding-top: 100px;
+
 }
 
 .banner-title {
@@ -349,6 +350,7 @@ textarea{
     line-height: 152px;
     text-align: center;
     color: #FFFFFF;
+
 }
 
 #section-nosotros {
@@ -359,6 +361,7 @@ textarea{
     margin-top: 100px;
     margin-bottom: 60px;
 }
+
 
 .content {
     color: #282828;
@@ -640,6 +643,16 @@ textarea{
 
 @media (max-width: 991.98px){
 
+    .banner-recursos {
+        height: 350px; /* Reduced height for tablets */
+        padding-top: 100px; /* Adjust padding for smaller screens */
+    }
+
+    .banner-title {
+        font-size: 48px; /* Reduced font size for tablets */
+        line-height: 60px; /* Adjusted line height */
+    }
+
     .resources-item {
         flex: 0 0 32%;
         margin: 40px 0 40px 0;
@@ -753,6 +766,7 @@ textarea{
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 2.6rem;
         padding-left: 2.6rem;
+
     }
 }
 
