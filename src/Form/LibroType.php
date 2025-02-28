@@ -44,9 +44,9 @@ class LibroType extends AbstractType
                 'class' => Alerta::class,
                 'query_builder' => function (AlertaRepository $er) {
                     return $er->createQueryBuilder('u')
-                        ->orderBy('u.numero', 'DESC');
+                        ->orderBy('u.slug', 'DESC');
                 },
-                'choice_label' => 'numero',
+                'choice_label' => 'slug',
                 'required'=>true,
                 ])
             ->add('slide', CheckboxType::class, [
