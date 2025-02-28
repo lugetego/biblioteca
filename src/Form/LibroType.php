@@ -44,7 +44,7 @@ class LibroType extends AbstractType
                 'class' => Alerta::class,
                 'query_builder' => function (AlertaRepository $er) {
                     return $er->createQueryBuilder('u')
-                        ->orderBy('u.id', null);
+                        ->orderBy('u.id', 'DESC');
                 },
                 'choice_label' => 'slug',
                 'required'=>true,
