@@ -279,7 +279,7 @@ textarea{
 }
 
 .lateral-borders {
-    border-left: 4px solid #BB8800;
+    border-left: 0 solid #BB8800;
     border-right: 4px solid #BB8800;
 }
 
@@ -681,6 +681,7 @@ textarea{
         border-left: 0 solid #BB8800;
         border-right: 0 solid #BB8800;
     }
+
     .articles-item {
         padding: 28px 12px;
         border-bottom: 1px solid #8d8d8d;
