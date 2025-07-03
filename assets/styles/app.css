@@ -621,9 +621,12 @@ textarea{
 .card-contacto {
     padding: 8px 24px 4px 32px;
     margin: 24px;
-    border-left: #BB8800 solid 4px;
-    min-width: 240px;
+    min-width: 440px;
     font-size: 18px;
+}
+
+.card-border {
+    border-right: #BB8800 solid 4px;
 }
 
 .contacto-foto {
