@@ -35,6 +35,9 @@
         </ul>
     </div>
     <li class="nav-item">
+        <a class="nav-link {{ app.request.attributes.get('_route') == 'app_boletin_consulta' ? 'active' : '' }}" href="{{ path('app_boletin_consulta',{'anio':"now"|date("Y")}) }}">Boletín</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{{ path('app_site_contacto') }}">Contacto</a>
     </li>
     {% if is_granted('ROLE_ADMIN') %}
