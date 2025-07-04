@@ -48,11 +48,11 @@
 {% endblock %}
 
 {% block body %}
-<div class="banner-recursos">
-    <div class="container">
-        <div class="banner-title">Recursos Electrónicos</div>
+    <div class="banner-recursos">
+        <div class="container">
+            <div class="banner-title">Recursos Electrónicos</div>
+        </div>
     </div>
-</div>
 
     <section id="recursos">
         <div class="content-title">
@@ -97,7 +97,7 @@
                     <div class="d-flex flex-column">
                         <div class="bd-title">Mathscinet</div>
                         <div class="bd-content">Base de datos de matemáticas a nivel mundial, contiene más de 3 millones de artículos y 2
-                        millones de artículos originales.</div>
+                            millones de artículos originales.</div>
                     </div>
                 </div>
             </div>
@@ -201,128 +201,145 @@
 
     </section>
 
-        <div class="container">
-            <div class="content-title">
-                <h1 class="mt-5">Sitios de Interés</h1>
-            </div>
+    <div class="container">
+        <div class="content-title">
+            <h1 class="mt-5">Sitios de Interés</h1>
+        </div>
 
-            <div class="d-flex justify-content-center">
-                <div class="content w-75 mb-5">
-                    Vínculos de diversas instituciones relacionadas con información digitalizada en matemáticas, física, estadística,
-                    biología y probabilidad, a través de estos enlaces usted podrá consultar, memorias a congresos, obras completas,
-                    revistas y libros en texto completo. Algunos con acceso limitado y otros con libre acceso a todos sus contenidos.
-                </div>
-            </div>
-
-            <div>
-                <div class="d-flex justify-content-center">
-                    <div class="sitio-card js-link" data-url="https://www.smm.org.mx/">
-                        <div class="d-flex flex-column">
-                            <div><img src="{{ asset('build/images/SMM.png')}}" alt="SMM"></div>
-                            <div class="sitio-title">Sociedad Matemática Mexicana</div>
-                            <div>Estimular y mantener el interés por la investigación</div>
-                            <div>matemática en México</div>
-                        </div>
-                    </div>
-                    <div class="sitio-card js-link" data-url="https://www.ams.org/">
-                        <div class="d-flex flex-column">
-                            <div><img src="{{ asset('build/images/AMS.png')}}" alt="SMM"></div>
-                            <div class="sitio-title">American Mathematical Society</div>
-                            <div>Association of professional mathematicians </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-center my-5">
-                    <div class="sitio-card js-link" data-url="https://www.aip.org/">
-                        <div class="d-flex flex-column">
-                            <div><img src="{{ asset('build/images/AIP.png')}}" alt="SMM"></div>
-                            <div class="sitio-title">American Institute of Physics</div>
-                            <div>Advances, promotes and serves the physical</div>
-                            <div>sciences for the benefit of humanity.</div>
-                        </div>
-                    </div>
-                    <div class="sitio-card">
-                        <div class="d-flex flex-column js-link" data-url="https://www.jstor.org/">
-                            <div><img src="{{ asset('build/images/JSTOR.png')}}" alt="SMM"></div>
-                            <div class="sitio-title">JSTOR digital library</div>
-                            <div>provides full-text searches of almost 2,000 journals</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-center">
-                    <div class="sitio-card-2 js-link" data-url="https://www.acm.org/">
-                        <i class="bi bi-link-45deg"></i>
-                        <div class="sitio-link">Association for Computing Machinery (ACM)</div>
-                    </div>
-                    <div class="sitio-card-2 js-link" data-url="https://www.iop.org/">
-                        <i class="bi bi-link-45deg"></i>
-                        <div class="sitio-link">Institute of Physics (IOP)</div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <div class="sitio-card-2 js-link" data-url="https://www.aps.org/">
-                        <i class="bi bi-link-45deg"></i>
-                        <div class="sitio-link">American Physical Society (APS)</div>
-                    </div>
-                    <div class="sitio-card-2 js-link" data-url="https://www.jstage.jst.go.jp/">
-                        <i class="bi bi-link-45deg"></i>
-                        <div class="sitio-link">J-Stage</div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <div class="sitio-card-2 js-link" data-url="https://bioone.org/">
-                        <i class="bi bi-link-45deg"></i>
-                        <div class="sitio-link">BioOne</div>
-                    </div>
-                    <div class="sitio-card-2 js-link" data-url="https://koreascience.kr/">
-                        <i class="bi bi-link-45deg"></i>
-                        <div class="sitio-link">Korea Science</div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <div class="sitio-card-2 js-link" data-url="https://www.cambridge.org/">
-                        <i class="bi bi-link-45deg"></i>
-                        <div class="sitio-link">Cambridge University Press</div>
-                    </div>
-                    <div class="sitio-card-2 js-link" data-url="https://www.mathnet.ru/">
-                        <i class="bi bi-link-45deg"></i>
-                        <div class="sitio-link">MatNet Ru</div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <div class="sitio-card-2 js-link" data-url="https://www.conricyt.mx/">
-                        <i class="bi bi-link-45deg"></i>
-                        <div class="sitio-link">CONRICyT</div>
-                    </div>
-                    <div class="sitio-card-2 js-link" data-url="http://www.numdam.org/">
-                        <i class="bi bi-link-45deg"></i>
-                        <div class="sitio-link">NUMDAM</div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <div class="sitio-card-2 js-link" data-url="https://dml.cz/">
-                        <i class="bi bi-link-45deg"></i>
-                        <div class="sitio-link">Czech Digital Mathematics Library</div>
-                    </div>
-                    <div class="sitio-card-2 js-link" data-url="http://pldml.icm.edu.pl/pldml/">
-                        <i class="bi bi-link-45deg"></i>
-                        <div class="sitio-link">Polish Digital Mathematics Library</div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <div class="sitio-card-2 js-link" data-url="https://gdz.sub.uni-goettingen.de/">
-                        <i class="bi bi-link-45deg"></i>
-                        <div class="sitio-link">Göttinger Digitalisierungszentrum</div>
-                    </div>
-                    <div class="sitio-card-2 js-link" data-url="http://www.turpion.org/">
-                        <i class="bi bi-link-45deg"></i>
-                        <div class="sitio-link">Turpion</div>
-                    </div>
-                </div>
+        <div class="d-flex justify-content-center">
+            <div class="content w-75 mb-5">
+                Vínculos de diversas instituciones relacionadas con información digitalizada en matemáticas, física, estadística,
+                biología y probabilidad, a través de estos enlaces usted podrá consultar, memorias a congresos, obras completas,
+                revistas y libros en texto completo. Algunos con acceso limitado y otros con libre acceso a todos sus contenidos.
             </div>
         </div>
+
+        <div>
+            <div class="d-flex justify-content-center">
+                <div class="sitio-card js-link" data-url="https://www.smm.org.mx/">
+                    <div class="d-flex flex-column">
+                        <div><img src="{{ asset('build/images/SMM.png')}}" alt="SMM"></div>
+                        <div class="sitio-title">Sociedad Matemática Mexicana</div>
+                        <div>Estimular y mantener el interés por la investigación</div>
+                        <div>matemática en México</div>
+                    </div>
+                </div>
+                <div class="sitio-card js-link" data-url="https://www.ams.org/">
+                    <div class="d-flex flex-column">
+                        <div><img src="{{ asset('build/images/AMS.png')}}" alt="SMM"></div>
+                        <div class="sitio-title">American Mathematical Society</div>
+                        <div>Association of professional mathematicians </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center my-5">
+                <div class="sitio-card js-link" data-url="https://www.aip.org/">
+                    <div class="d-flex flex-column">
+                        <div><img src="{{ asset('build/images/AIP.png')}}" alt="SMM"></div>
+                        <div class="sitio-title">American Institute of Physics</div>
+                        <div>Advances, promotes and serves the physical</div>
+                        <div>sciences for the benefit of humanity.</div>
+                    </div>
+                </div>
+                <div class="sitio-card">
+                    <div class="d-flex flex-column js-link" data-url="https://www.jstor.org/">
+                        <div><img src="{{ asset('build/images/JSTOR.png')}}" alt="SMM"></div>
+                        <div class="sitio-title">JSTOR digital library</div>
+                        <div>Provides full-text searches of almost 2,000 journals</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="d-flex justify-content-center my-5">
+                <div class="sitio-card js-link" data-url="https://digitalab-ssie.unam.mx/acuerdos/">
+                    <div class="d-flex flex-column">
+                        <div><img src="{{ asset('build/images/ATE.svg')}}" width="200" height="70" alt="Acuerdos Transformativos"></div>
+                        <div class="sitio-title">Acuerdos Transformativos<br> UNAM-Editoriales</div>
+                        <div>Accede a contenido científico y publica en</div>
+                        <div>acceso abierto sin costo. Conoce los convenios</div>
+                        <div>vigentes con editoriales internacionales.</div>
+                    </div>
+                </div>
+                <div class="sitio-card">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <div class="sitio-card-2 js-link" data-url="https://www.acm.org/">
+                <i class="bi bi-link-45deg"></i>
+                <div class="sitio-link">Association for Computing Machinery (ACM)</div>
+            </div>
+            <div class="sitio-card-2 js-link" data-url="https://www.iop.org/">
+                <i class="bi bi-link-45deg"></i>
+                <div class="sitio-link">Institute of Physics (IOP)</div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="sitio-card-2 js-link" data-url="https://www.aps.org/">
+                <i class="bi bi-link-45deg"></i>
+                <div class="sitio-link">American Physical Society (APS)</div>
+            </div>
+            <div class="sitio-card-2 js-link" data-url="https://www.jstage.jst.go.jp/">
+                <i class="bi bi-link-45deg"></i>
+                <div class="sitio-link">J-Stage</div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="sitio-card-2 js-link" data-url="https://bioone.org/">
+                <i class="bi bi-link-45deg"></i>
+                <div class="sitio-link">BioOne</div>
+            </div>
+            <div class="sitio-card-2 js-link" data-url="https://koreascience.kr/">
+                <i class="bi bi-link-45deg"></i>
+                <div class="sitio-link">Korea Science</div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="sitio-card-2 js-link" data-url="https://www.cambridge.org/">
+                <i class="bi bi-link-45deg"></i>
+                <div class="sitio-link">Cambridge University Press</div>
+            </div>
+            <div class="sitio-card-2 js-link" data-url="https://www.mathnet.ru/">
+                <i class="bi bi-link-45deg"></i>
+                <div class="sitio-link">MatNet Ru</div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="sitio-card-2 js-link" data-url="https://www.conricyt.mx/">
+                <i class="bi bi-link-45deg"></i>
+                <div class="sitio-link">CONRICyT</div>
+            </div>
+            <div class="sitio-card-2 js-link" data-url="http://www.numdam.org/">
+                <i class="bi bi-link-45deg"></i>
+                <div class="sitio-link">NUMDAM</div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="sitio-card-2 js-link" data-url="https://dml.cz/">
+                <i class="bi bi-link-45deg"></i>
+                <div class="sitio-link">Czech Digital Mathematics Library</div>
+            </div>
+            <div class="sitio-card-2 js-link" data-url="http://pldml.icm.edu.pl/pldml/">
+                <i class="bi bi-link-45deg"></i>
+                <div class="sitio-link">Polish Digital Mathematics Library</div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="sitio-card-2 js-link" data-url="https://gdz.sub.uni-goettingen.de/">
+                <i class="bi bi-link-45deg"></i>
+                <div class="sitio-link">Göttinger Digitalisierungszentrum</div>
+            </div>
+            <div class="sitio-card-2 js-link" data-url="http://www.turpion.org/">
+                <i class="bi bi-link-45deg"></i>
+                <div class="sitio-link">Turpion</div>
+            </div>
+        </div>
+    </div>
+    </div>
 
     </section>
 
