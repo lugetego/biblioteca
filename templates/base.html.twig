@@ -74,9 +74,25 @@
                         </ul>
                     </div>
 
-                    <li class="nav-item">
-                        <a class="nav-link {{ app.request.attributes.get('_route') == 'app_boletin_consulta' ? 'active' : '' }}" href="{{ path('app_boletin_consulta',{'anio':"now"|date("Y")}) }}">Boletín</a>
-                    </li>
+                    <div class="dropdown">
+                        <button class="nav-link dropdown-toggle {{ app.request.attributes.get('_route') starts with 'app_boletin_consulta' ? 'active' : '' }}" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Boletín
+                        </button>
+
+                    {% set years = [2024, 2025, 2026] %}
+
+                        <ul class="dropdown-menu">
+                            {% for year in years %}
+                            <li>
+                                <a class="dropdown-item {{ app.request.attributes.get('_route') == 'app_boletin_consulta' and app.request.get('anio') == year ? 'active' : '' }}"
+                                   href="{{ path('app_boletin_consulta', {'anio': year}) }}">
+                                    {{ year }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
                     <li class="nav-item">
                         <a class="nav-link {{ app.request.attributes.get('_route') == 'app_site_contacto' ? 'active' : '' }}" href="{{ path('app_site_contacto') }}">Contacto</a>
                     </li>
