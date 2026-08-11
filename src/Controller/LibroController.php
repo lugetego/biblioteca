@@ -102,7 +102,9 @@ class LibroController extends AbstractController
             if ($isbn) {
                 try {
                     $response = $this->httpClient->request('GET', 'https://www.googleapis.com/books/v1/volumes', [
-                        'query' => ['q' => 'isbn:' . $isbn],
+                        'query' => ['q' => 'isbn:' . $isbn,
+                        'key' => $this->getParameter('google_books_api_key'),
+                        ],
                     ]);
                     $bookData = $response->toArray();
 
